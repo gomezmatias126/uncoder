@@ -1,0 +1,92 @@
+---
+const nav_item = ["Servicios", "Precios", "Trabajos"];
+---
+
+<header class="w-full h-20 flex items-center justify-center fixed z-50 top-0">
+  <nav class="container relative">
+    <ul
+      class="flex flex-row items-center [&>div>a]:text-base justify-between static"
+    >
+      <li class="md:flex-grow md:basis-0">
+        <a href="" class="font-bold text-3xl tracking-wider">uncoder</a>
+      </li>
+      <li id="item_navbar_links" class="lista_item_navbar md:flex hidden md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent bg-dark top-0 left-0 w-full flex-col items-center font-medium gap-10 md:text-base text-4xl">
+        {nav_item.map((item) => <a href="">{item}</a>)}
+        <a
+          href=""
+          class="visible md:hidden bg-light px-10 py-3 text-dark font-bold rounded-3xl"
+          >Pedí Tu Página</a
+        >
+      </li>
+      <li class="md:flex hidden md:flex-grow md:basis-0 md:justify-end">
+        <a href="" class="bg-light px-10 py-3 text-dark font-bold rounded-3xl"
+          >Pedí Tu Página</a
+        >
+      </li>
+      <li class="md:hidden visible h-auto flex">
+        <button
+          id="btn_toggle_navbar"
+          class="md:hidden visible"
+          aria-roledescription="Boton para Abrir Menu de Navegación"
+        >
+          <div id="btn_toggle_navbar_svg_close" class="hidden">
+            <svg
+              width="41"
+              height="41"
+              viewBox="0 0 41 41"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M35.9996 0.5L20.9961 15.5L5.99609 0.5L0.996094 5.5L15.9961 20.5L0.996094 35.5L5.99609 40.5L20.9961 25.5L35.9996 40.5L40.9996 35.5L25.9996 20.5L40.9996 5.5L35.9996 0.5Z"
+                fill="#FCFEFF"></path>
+            </svg>
+          </div>
+          <div id="btn_toggle_navbar_svg_open" class="visible">
+            <svg
+              width="40"
+              height="21"
+              viewBox="0 0 40 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0H40V3H0V0Z" fill="#FCFEFF"></path>
+              <path d="M20 9H40V12H20V9Z" fill="#FCFEFF"></path>
+              <path d="M10 18H40V21H10V18Z" fill="#FCFEFF"></path>
+            </svg>
+          </div>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const btn_toggle_navbar = document.getElementById('btn_toggle_navbar')
+  const btn_toggle_navbar_svg_close = document.getElementById('btn_toggle_navbar_svg_close')
+  const btn_toggle_navbar_svg_open = document.getElementById('btn_toggle_navbar_svg_open')
+  const item_navbar_links = document.getElementById('item_navbar_links')
+  const body = document.body; 
+
+  function toggleMenu(){
+    btn_toggle_navbar_svg_close.classList.toggle('hidden');
+    btn_toggle_navbar_svg_open.classList.toggle('hidden');
+    item_navbar_links.classList.toggle('hidden');
+    item_navbar_links.classList.toggle('flex');
+    if(item_navbar_links.classList.contains('hidden') === false) {
+      item_navbar_links.addEventListener('click', toggleMenu)
+    }
+    else{
+      item_navbar_links.removeEventListener('click', toggleMenu);
+    }
+  }
+  btn_toggle_navbar.addEventListener('click', toggleMenu);
+</script>
+
+<style>
+  @media(max-width: 768px){
+    .lista_item_navbar{
+      height: calc(100vh - 5rem);
+    }
+  }
+</style>
