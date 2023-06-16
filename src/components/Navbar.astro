@@ -6,7 +6,7 @@ let barritas = "/";
 <header id="header_navbar"
   class="w-full h-20 bg-dark flex items-center justify-center fixed z-50 top-0 transition-all"
 >
-  <nav class="container relative">
+  <nav class="container static">
     <ul
       class="flex flex-row items-center [&>div>a]:text-base justify-between static"
     >
@@ -15,7 +15,7 @@ let barritas = "/";
       </li>
       <li
         id="item_navbar_links"
-        class="lista_item_navbar md:flex hidden md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent bg-dark top-0 left-0 w-full flex-col items-center font-medium gap-10 md:text-base text-4xl capitalize"
+        class="lista_item_navbar md:flex hidden bg-dark/[0.9] md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent md:top-0 top-full left-0 w-full flex-col items-center font-medium gap-10 md:text-base text-4xl capitalize"
       >
         {nav_item.map((item) => <a href={barritas + item}>{item}</a>)}
         <a
@@ -36,6 +36,7 @@ let barritas = "/";
           id="btn_toggle_navbar"
           class="md:hidden visible"
           aria-roledescription="Boton para Abrir Menu de Navegación"
+          name="Boton para Abrir Menu de Navegación"
         >
           <div id="btn_toggle_navbar_svg_close" class="hidden">
             <svg
@@ -97,6 +98,7 @@ let barritas = "/";
 
   window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
+    if (btn_toggle_navbar_svg_close.classList.contains("hidden") === false) return;
     if (prevScrollpos > currentScrollPos) {
       header_navbar.style.top = "0";
     } else {

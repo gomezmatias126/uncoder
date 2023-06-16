@@ -1,0 +1,182 @@
+---
+let caracteristicasLandingPrecios = [
+  "Diseño Personalizado",
+  "5 Secciones a Elección",
+  "Formulario de Contacto",
+  "Botón de Whatsapp",
+  "Google Maps",
+  "Botones de Redes Sociales",
+  "Hosting Incluido por un Año",
+  "Dominio .com.ar Incluido por un Año",
+  "Certificado SSL por 1 año",
+  "Configuración Correo Corporativo",
+];
+---
+
+<div class="container my-36">
+  <h2
+    class="xl:text-9xl lg:text-8xl md:text-7xl sm:text-6xl text-[3.3rem] font-bold mb-32"
+  >
+    Precios
+  </h2>
+  <div class="flex flex-col gap-20 items-center">
+    <article
+      class="flex md:flex-row flex-col justify-between xl:gap-10 md:gap-3 gap-10 bg-gradient-to-bl from-dark/[0.7] via-dark-light/[0.7] to-dark/[0.7] sm:rounded-3xl rounded-2xl lg:py-12 lg:px-10 sm:py-10 sm:px-6 px-4 py-8"
+    >
+      <div
+        class="2xl:w-6/12 xl:w-[45%] md:w-6/12 flex flex-col lg:10 sm:gap-8 gap-7"
+      >
+        <h3
+          class="xl:text-7xl lg:text-6xl md:text-5xl text-[2.7rem] font-bold leading-none"
+        >
+          Landing Pages
+        </h3>
+        <p
+          class="xl:text-xl lg:text-xl md:text-lg text-base font-medium text-grey-text"
+        >
+          Páginas Web simples, ideales para negocios pequeños que buscan
+          presentar su marca por primera vez en internet.
+        </p>
+        <div class="">
+          <p
+            class="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-[2.5rem] font-bold mb-2 leading-none"
+          >
+            $25.000
+          </p>
+          <p class="text-sm font-regular lg:text-grey text-grey-text">
+            *Pago Único. **Consulte Precios en Cuotas.
+          </p>
+        </div>
+        <div
+          class="flex lg:flex-row md:flex-col sm:flex-row flex-col gap-5 lg:items-center relative w-fit"
+        >
+          <a
+            href=""
+            class="btn text-dark hover:bg-dark hover:text-naranja hover:ring-2 hover:ring-naranja transition-all [&>svg]:hover:fill-naranja w-fit hover:scale-105 h-auto"
+            >Quiero una Página <svg
+              class="fill-dark"
+              width="22"
+              height="24"
+              viewBox="0 0 22 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.9014 24L16.2254 23.4366C13.9718 21.2958 12.3944 19.9437 12.3944 18.2535C12.3944 16.9014 13.5211 15.7746 14.8732 15.7746C15.662 15.7746 16.4507 16.1127 16.9014 16.6761C17.3521 16.1127 18.1408 15.7746 18.9296 15.7746C20.2817 15.7746 21.4085 16.7887 21.4085 18.2535C21.4085 19.9437 19.831 21.2958 17.5775 23.4366L16.9014 24ZM15.7746 0C17.0141 0 18.0282 1.01408 18.0282 2.25352V12.4845L16.9014 12.3944L15.7746 12.4845V2.25352H10.1408V11.2676L7.32394 8.73239L4.50704 11.2676V2.25352H2.25352V20.2817H10.231C10.3662 21.093 10.6479 21.8479 11.0423 22.5352H2.25352C1.01408 22.5352 0 21.5211 0 20.2817V2.25352C0 1.01408 1.01408 0 2.25352 0H15.7746Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href=""
+            class="flex items-center gap-2 stroke-grey-text text-grey-text hover:scale-105 transition-all hover:[&>*]:scale-105 lg:text-base text-sm"
+            >Ver Ejemplos <svg
+              class="lg:w-5 h-3"
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.4082 3.5H2.4082C2.14299 3.5 1.88863 3.60536 1.7011 3.79289C1.51356 3.98043 1.4082 4.23478 1.4082 4.5V14.5C1.4082 14.7652 1.51356 15.0196 1.7011 15.2071C1.88863 15.3946 2.14299 15.5 2.4082 15.5H12.4082C12.6734 15.5 12.9278 15.3946 13.1153 15.2071C13.3028 15.0196 13.4082 14.7652 13.4082 14.5V9.5M7.4082 9.5L14.9082 2M10.4082 0.5H16.4082V6.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <span
+        class="md:hidden visible h-[0.01px] border border-dashed w-full border-grey opacity-50"
+      ></span>
+      <div class="w-auto md:self-center">
+        <ul
+          class="grid xl:grid-cols-2 items-start grid-cols-1 xl:gap-x-2 xl:gap-y-8 lg:gap-8 md:gap-8 gap-8"
+        >
+          {
+            caracteristicasLandingPrecios.map((item) => (
+              <li class="flex items-center gap-2 leading-none md:text-lg text-base w-max">
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="8"
+                    cy="8.5"
+                    r="8"
+                    fill="#FAB82C"
+                    fill-opacity="0.8"
+                  />
+                  <path
+                    d="M6.83826 12.5C6.58967 12.5 6.35422 12.384 6.20335 12.184L4.16144 9.486C4.09831 9.40268 4.05222 9.30774 4.02581 9.20659C3.9994 9.10545 3.99318 9.00009 4.00751 8.89654C4.02184 8.79299 4.05644 8.69329 4.10933 8.60312C4.16222 8.51295 4.23236 8.43409 4.31574 8.37104C4.3991 8.30774 4.49413 8.2615 4.59539 8.23499C4.69664 8.20848 4.80214 8.20221 4.90582 8.21654C5.00951 8.23088 5.10934 8.26553 5.19961 8.31852C5.28987 8.37151 5.36879 8.4418 5.43185 8.52534L6.7754 10.2992L10.1534 4.87472C10.2655 4.69561 10.444 4.56826 10.6498 4.52058C10.8556 4.47291 11.0719 4.50881 11.2512 4.62041C11.6244 4.85243 11.7393 5.3439 11.5061 5.71765L7.5149 12.124C7.44677 12.2338 7.35285 12.3254 7.24131 12.3907C7.12978 12.456 7.00398 12.4932 6.87484 12.4989C6.86227 12.5 6.85084 12.5 6.83826 12.5Z"
+                    fill="#090A05"
+                  />
+                </svg>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </article>
+  </div>
+  <div class="md:my-48 my-44">
+    <h3 class="xl:text-7xl lg:text-6xl md:text-5xl text-[2.7rem] font-bold leading-none md:mb-28 mb-20">Medios de Pago</h3>
+    <div class="flex md:flex-row flex-col md:gap-20 gap-14 items-center justify-between">
+      <div class="flex flex-col gap-3 items-center justify-center ">
+        <svg
+          width="53"
+          height="52"
+          viewBox="0 0 53 52"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M47.1522 19.4783V41.2174ZM12.3696 19.4783V41.2174ZM5.84787 19.4783V41.2174ZM40.6305 19.4783V41.2174ZM4.76091 45.5652H48.2392ZM0.413086 51H52.587ZM26.5 23.8261H24.3261C23.7496 23.8261 23.1966 24.0551 22.7889 24.4628C22.3813 24.8705 22.1522 25.4234 22.1522 26V26.8152C22.1522 27.2856 22.3048 27.7433 22.587 28.1196C22.8692 28.4959 23.2659 28.7705 23.7174 28.9022L29.2827 30.5261C29.7342 30.6578 30.1309 30.9324 30.4131 31.3087C30.6953 31.685 30.8479 32.1427 30.8479 32.613V34.6957C30.8479 35.2722 30.6188 35.8252 30.2111 36.2328C29.8035 36.6405 29.2505 36.8696 28.674 36.8696H26.5M26.5 23.8261H28.674C29.2505 23.8261 29.8035 24.0551 30.2111 24.4628C30.6188 24.8705 30.8479 25.4234 30.8479 26V27.087M26.5 23.8261V19.4783ZM26.5 36.8696H24.3261C23.7496 36.8696 23.1966 36.6405 22.7889 36.2328C22.3813 35.8252 22.1522 35.2722 22.1522 34.6957V33.6087M26.5 36.8696V41.2174ZM51.5 13.5V15.1304H1.50004V13.5C12.3696 9.69565 18.8913 6.43478 25.9566 1H27.0435C34.1087 6.43478 40.6305 9.69565 51.5 13.5Z"
+            fill="#FCFEFF"></path>
+          <path
+            d="M47.1522 19.4783V41.2174M12.3696 19.4783V41.2174M5.84787 19.4783V41.2174M40.6305 19.4783V41.2174M4.76091 45.5652H48.2392M0.413086 51H52.587M26.5 23.8261H24.3261C23.7496 23.8261 23.1966 24.0551 22.7889 24.4628C22.3813 24.8705 22.1522 25.4234 22.1522 26V26.8152C22.1522 27.2856 22.3048 27.7433 22.587 28.1196C22.8692 28.4959 23.2659 28.7705 23.7174 28.9022L29.2827 30.5261C29.7342 30.6578 30.1309 30.9324 30.4131 31.3087C30.6953 31.685 30.8479 32.1427 30.8479 32.613V34.6957C30.8479 35.2722 30.6188 35.8252 30.2111 36.2328C29.8035 36.6405 29.2505 36.8696 28.674 36.8696H26.5M26.5 23.8261H28.674C29.2505 23.8261 29.8035 24.0551 30.2111 24.4628C30.6188 24.8705 30.8479 25.4234 30.8479 26V27.087M26.5 23.8261V19.4783M26.5 36.8696H24.3261C23.7496 36.8696 23.1966 36.6405 22.7889 36.2328C22.3813 35.8252 22.1522 35.2722 22.1522 34.6957V33.6087M26.5 36.8696V41.2174M51.5 13.5V15.1304H1.50004V13.5C12.3696 9.69565 18.8913 6.43478 25.9566 1H27.0435C34.1087 6.43478 40.6305 9.69565 51.5 13.5Z"
+            stroke="#FCFEFF"></path>
+        </svg>
+        <p class="xl:text-xl lg:text-xl md:text-lg text-base font-medium text-light">Transferencia Bancaria</p>
+      </div>
+      <div class="flex flex-col gap-3 items-center justify-center ">
+        <svg
+          width="45"
+          height="50"
+          viewBox="0 0 45 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M23.8815 0C30.894 0 36.479 5.025 37.7415 11.3675C42.439 13.7775 45.334 19.06 44.359 24.635L44.244 25.2125L44.124 25.755C43.4064 28.9831 41.6423 31.8836 39.1059 34.0054C36.5695 36.1272 33.403 37.3513 30.099 37.4875L29.4815 37.5H25.849L24.5565 45.7725C24.3829 46.881 23.8416 47.899 23.0195 48.6626C22.1974 49.4262 21.1423 49.8911 20.024 49.9825L19.6165 50H14.6765C13.414 49.9997 12.1984 49.522 11.2733 48.6628C10.3483 47.8037 9.78236 46.6265 9.68899 45.3675L9.67649 45H5.45149C4.76038 44.9999 4.07679 44.8565 3.44388 44.579C2.81097 44.3014 2.24248 43.8956 1.77429 43.3872C1.3061 42.8789 0.948383 42.279 0.723717 41.6254C0.499051 40.9718 0.412316 40.2788 0.468987 39.59L0.511487 39.2275L5.65149 6.3425C5.91575 4.65008 6.75138 3.09911 8.01943 1.9475C9.28747 0.795889 10.9115 0.11304 12.6215 0.0125003L13.0615 0H23.884H23.8815ZM37.6015 17.4675L37.579 17.5575C36.6871 21.1118 34.6336 24.2664 31.7444 26.5206C28.8553 28.7747 25.296 29.9993 21.6315 30H17.014L15.064 42.5H15.069L14.6765 45H19.6165L20.909 36.7275C21.0932 35.5496 21.6922 34.4763 22.598 33.7011C23.5038 32.926 24.6568 32.5 25.849 32.5H29.4815C31.7563 32.4996 33.963 31.7236 35.7374 30.3001C37.5118 28.8766 38.7478 26.8906 39.2415 24.67L39.364 24.1275C39.6265 22.9574 39.6034 21.7414 39.2967 20.5821C38.9899 19.4229 38.4084 18.3545 37.6015 17.4675ZM23.884 5H13.0565C12.5087 5.00029 11.9761 5.1805 11.5407 5.51293C11.1053 5.84537 10.7911 6.31162 10.6465 6.84L10.589 7.115L5.45149 40H10.3915L12.074 29.2275C12.2476 28.1186 12.7894 27.1003 13.612 26.3367C14.4346 25.573 15.4902 25.1084 16.609 25.0175L17.014 25H21.629C26.879 25 31.454 21.43 32.729 16.3425C33.0573 15.0356 33.0919 13.6721 32.8303 12.3502C32.5687 11.0283 32.0174 9.78081 31.2161 8.69742C30.4148 7.61402 29.3834 6.72165 28.196 6.0845C27.0086 5.44735 25.6948 5.08124 24.349 5.0125L23.8815 5H23.884Z"
+            fill="#FCFEFF"></path>
+        </svg>
+
+        <p class="xl:text-xl lg:text-xl md:text-lg text-base font-medium text-light">Paypal</p>
+      </div>
+      <div class="flex flex-col gap-3 items-center justify-center ">
+        <svg
+          width="68"
+          height="54"
+          viewBox="0 0 68 54"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.5 14.5H66.5M1.5 17H66.5M11.5 34.5H31.5M11.5 42H21.5M9 52H59C60.9891 52 62.8968 51.2098 64.3033 49.8033C65.7098 48.3968 66.5 46.4891 66.5 44.5V9.5C66.5 7.51088 65.7098 5.60322 64.3033 4.1967C62.8968 2.79018 60.9891 2 59 2H9C7.01088 2 5.10322 2.79018 3.6967 4.1967C2.29018 5.60322 1.5 7.51088 1.5 9.5V44.5C1.5 46.4891 2.29018 48.3968 3.6967 49.8033C5.10322 51.2098 7.01088 52 9 52Z"
+            stroke="#FCFEFF"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+
+        <p class="xl:text-xl lg:text-xl md:text-lg text-base font-medium text-light">Tarjetas de Credito y Debito</p>
+      </div>
+    </div>
+  </div>
+</div>

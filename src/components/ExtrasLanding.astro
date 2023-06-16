@@ -29,8 +29,8 @@ let utilidades = [
     <ul class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-y-14 gap-y-5">
       {
         utilidades.map((item) => (
-          <li class="item_utilidad flex gap-2 border border-dark-tenue px-4 py-3 w-fit rounded-3xl backdrop-blur-3xl font-regular md:text-xl sm:text-lg text-base text-light">
-            {/*<svg
+          <li class="item_utilidad flex items-center gap-2 border border-dark-tenue px-4 py-3 w-fit rounded-3xl font-regular md:text-xl sm:text-lg text-base text-light">
+            <svg
               class="w-4"
               width="26"
               height="25"
@@ -49,7 +49,7 @@ let utilidades = [
                 d="M11.1765 21C10.6793 21 10.2084 20.768 9.9067 20.3679L5.82289 14.972C5.69663 14.8054 5.60445 14.6155 5.55162 14.4132C5.4988 14.2109 5.48636 14.0002 5.51502 13.7931C5.54368 13.586 5.61288 13.3866 5.71865 13.2062C5.82443 13.0259 5.96472 12.8682 6.13149 12.7421C6.2982 12.6155 6.48826 12.523 6.69077 12.47C6.89329 12.417 7.10427 12.4044 7.31164 12.4331C7.51901 12.4618 7.71868 12.5311 7.89921 12.637C8.07975 12.743 8.23759 12.8836 8.3637 13.0507L11.0508 16.5984L17.8069 5.74943C18.0309 5.39123 18.3879 5.13652 18.7995 5.04117C19.2111 4.94582 19.6438 5.01762 20.0025 5.24082C20.7489 5.70486 20.9786 6.68781 20.5123 7.43531L12.5298 20.2479C12.3935 20.4676 12.2057 20.6508 11.9826 20.7814C11.7596 20.9121 11.508 20.9863 11.2497 20.9977C11.2245 21 11.2017 21 11.1765 21Z"
                 fill="#090A05"
               />
-            </svg>*/}
+            </svg>
             {item}
           </li>
         ))
@@ -58,8 +58,9 @@ let utilidades = [
   </div>
 </div>
 
+
 <style>
-  @media (min-width: 1024px){
+   @media (min-width: 1024px){
     .item_utilidad:nth-child(6n+1), .item_utilidad:nth-child(6n+2), .item_utilidad:nth-child(6n+3) {
       justify-self: end;
     }
@@ -76,5 +77,5 @@ let utilidades = [
     .item_utilidad:nth-child(2n+1){
       justify-self: end;
     }
-  }
+  } 
 </style>

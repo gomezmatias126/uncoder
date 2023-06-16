@@ -41,5 +41,22 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+    function ({ addComponents, theme }) {
+      addComponents({
+        '.btn': {
+					display: 'flex',
+					padding: '12px 40px',
+					gap: '16px',
+					background: '#fab82c',
+					width: 'fit-content',
+    			'flex-direction': 'row',
+    			'justify-content': 'center',
+					'align-items': 'center',
+					'border-radius': '1.5rem',
+					'font-weight': 'bold'
+        }
+      })
+    }
+	],
 }
