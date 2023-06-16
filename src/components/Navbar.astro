@@ -1,8 +1,11 @@
 ---
-const nav_item = ["Servicios", "Precios", "Trabajos"];
+const nav_item = ["servicios", "precios", "trabajos"];
+let barritas = "/";
 ---
 
-<header class="w-full h-20 flex items-center justify-center fixed z-50 top-0">
+<header id="header_navbar"
+  class="w-full h-20 bg-dark flex items-center justify-center fixed z-50 top-0 transition-all"
+>
   <nav class="container relative">
     <ul
       class="flex flex-row items-center [&>div>a]:text-base justify-between static"
@@ -10,16 +13,21 @@ const nav_item = ["Servicios", "Precios", "Trabajos"];
       <li class="md:flex-grow md:basis-0">
         <a href="" class="font-bold text-3xl tracking-wider">uncoder</a>
       </li>
-      <li id="item_navbar_links" class="lista_item_navbar md:flex hidden md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent bg-dark top-0 left-0 w-full flex-col items-center font-medium gap-10 md:text-base text-4xl">
-        {nav_item.map((item) => <a href="">{item}</a>)}
+      <li
+        id="item_navbar_links"
+        class="lista_item_navbar md:flex hidden md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent bg-dark top-0 left-0 w-full flex-col items-center font-medium gap-10 md:text-base text-4xl capitalize"
+      >
+        {nav_item.map((item) => <a href={barritas + item}>{item}</a>)}
         <a
-          href=""
+          href="/contacto"
           class="visible md:hidden bg-light px-10 py-3 text-dark font-bold rounded-3xl"
           >Pedí Tu Página</a
         >
       </li>
       <li class="md:flex hidden md:flex-grow md:basis-0 md:justify-end">
-        <a href="" class="bg-light px-10 py-3 text-dark font-bold rounded-3xl"
+        <a
+          href="/contacto"
+          class="bg-light px-10 py-3 text-dark font-bold rounded-3xl"
           >Pedí Tu Página</a
         >
       </li>
@@ -62,30 +70,45 @@ const nav_item = ["Servicios", "Precios", "Trabajos"];
 </header>
 
 <script>
-  const btn_toggle_navbar = document.getElementById('btn_toggle_navbar')
-  const btn_toggle_navbar_svg_close = document.getElementById('btn_toggle_navbar_svg_close')
-  const btn_toggle_navbar_svg_open = document.getElementById('btn_toggle_navbar_svg_open')
-  const item_navbar_links = document.getElementById('item_navbar_links')
-  const body = document.body; 
+  const btn_toggle_navbar = document.getElementById("btn_toggle_navbar");
+  const item_navbar_links = document.getElementById("item_navbar_links");
+  const body = document.body;
+  const btn_toggle_navbar_svg_close = document.getElementById(
+    "btn_toggle_navbar_svg_close"
+  );
+  const btn_toggle_navbar_svg_open = document.getElementById(
+    "btn_toggle_navbar_svg_open"
+  );
+  const header_navbar = document.getElementById('header_navbar');
+  let prevScrollpos = window.pageYOffset;
 
-  function toggleMenu(){
-    btn_toggle_navbar_svg_close.classList.toggle('hidden');
-    btn_toggle_navbar_svg_open.classList.toggle('hidden');
-    item_navbar_links.classList.toggle('hidden');
-    item_navbar_links.classList.toggle('flex');
-    if(item_navbar_links.classList.contains('hidden') === false) {
-      item_navbar_links.addEventListener('click', toggleMenu)
-    }
-    else{
-      item_navbar_links.removeEventListener('click', toggleMenu);
+  function toggleMenu() {
+    btn_toggle_navbar_svg_close.classList.toggle("hidden");
+    btn_toggle_navbar_svg_open.classList.toggle("hidden");
+    item_navbar_links.classList.toggle("hidden");
+    item_navbar_links.classList.toggle("flex");
+    if (item_navbar_links.classList.contains("hidden") === false) {
+      item_navbar_links.addEventListener("click", toggleMenu);
+    } else {
+      item_navbar_links.removeEventListener("click", toggleMenu);
     }
   }
-  btn_toggle_navbar.addEventListener('click', toggleMenu);
+  btn_toggle_navbar.addEventListener("click", toggleMenu);
+
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      header_navbar.style.top = "0";
+    } else {
+      header_navbar.style.top = "-5rem";
+    }
+    prevScrollpos = currentScrollPos;
+  };
 </script>
 
 <style>
-  @media(max-width: 768px){
-    .lista_item_navbar{
+  @media (max-width: 768px) {
+    .lista_item_navbar {
       height: calc(100vh - 5rem);
     }
   }
