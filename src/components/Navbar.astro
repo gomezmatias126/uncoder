@@ -11,11 +11,11 @@ let barritas = "/";
       class="flex flex-row items-center [&>div>a]:text-base justify-between static"
     >
       <li class="md:flex-grow md:basis-0">
-        <a href="" class="font-bold text-3xl tracking-wider">uncoder</a>
+        <a href="/" class="font-bold text-3xl tracking-wider">uncoder</a>
       </li>
       <li
         id="item_navbar_links"
-        class="lista_item_navbar md:flex hidden bg-dark/[0.9] md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent md:top-0 top-full left-0 w-full flex-col items-center font-medium gap-10 md:text-base text-4xl capitalize"
+        class="lista_item_navbar md:flex hidden bg-dark/[0.95] md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent md:top-0 top-full left-0 w-full flex-col items-center sm:font-medium font-bold gap-10 md:text-base text-4xl capitalize"
       >
         {nav_item.map((item) => <a href={barritas + item}>{item}</a>)}
         <a
