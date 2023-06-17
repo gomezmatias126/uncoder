@@ -220,7 +220,7 @@
     e.preventDefault();
     btnEnviarForm.disabled = true;
     var datos = new FormData(formulario);
-    fetch("/php/post.php", {
+    fetch("post.php", {
       method: "POST",
       body: datos,
     })
