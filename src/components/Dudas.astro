@@ -8,14 +8,15 @@ let preguntas = [
   "Qué es un Dominio?",
   "Qué es un hosting?",
 ];
+
 let respuestas = [
-  "Podes pagar por transferencia bancaria y/o mediante un link de pago de Mercadopago, una vez que tú página este completamente lista y operativa en internet.",
-  "La creación de una Landing Page demora entre 5 a 10 días, dependiendo del diseño y la entrega de contenidos de parte del cliente.<br>La creación de un Ecommerce suele demorar entre 2 a 3 semanas, nuevamente dependiendo del diseño y la complejidad de la tienda, así como las configuraciones que dependan del cliente, como las credenciales para los medios de pago y los servicios de envió como oca, andreani, etc.",
-  "Dependiendo del tipo de página web que haya escogido podra administrarla usted mismo, cambiando tanto el diseño como las funcionalidades avanzadas de su página.<br>Para solicitar una web autoadministrable escribanos al nuestro mail y la asesoraremos para llegar a la mejor solución para usted.",
-  "Para diseñar las web recurrimos a Figma.com, el cual nos permite generar rápidamente un bosquejo para ver como podría ser la web.<br>En cuanto a la programación, utilizamos Wordpress con el plugin de Woocommerce para las tiendas virtuales y para las Landing Page empleamos código con herramientas como Astro.build y Tailwind CSS.",
-  "Así es, por el momento nos enfocamos en diseño y desarrollo de sitios web, más adelante planeamos ofrecer servicios de Marketing Digital y Comunity Manager para cerrar el circulo de Servicios Digitales para aumentar las ventas de pequeños negocios.",
-  "Un dominio web es una dirección única e irrepetible de un sitio web,  que le permitirá a sus clientes ingresar en su pagina, mediante un nombre sencillo y fácil de recordar como uncoder.com.ar.\n Es comparable a la dirección de una vivienda o una patente de auto. Véase más información acerca de los Dominios.",
-  "Un hosting es un servicio de alojamiento de sitios web en servidores físicos remotos, allí se almacenan todos los archivos y el contenido de tu página para que este disponible para todo el mundo las 24 horas del día. Es comparable a alquilar un local o galpón para poner tu comercio. Más info acerca de los Hostings.",
+  'Podes pagar por transferencia bancaria y/o mediante un link de pago de Mercadopago, una vez que tú página este completamente lista y operativa en internet.',
+  'La creación de una Landing Page demora entre 5 a 10 días, dependiendo del diseño y la entrega de contenidos de parte del cliente. La creación de un Ecommerce suele demorar entre 2 a 3 semanas, nuevamente dependiendo del diseño y la complejidad de la tienda, así como las configuraciones que dependan del cliente, como las credenciales para los medios de pago y los servicios de envió como oca, andreani, etc.',
+  'Dependiendo del tipo de página web que haya escogido podra administrarla usted mismo, cambiando tanto el diseño como las funcionalidades avanzadas de su página. Para solicitar una web autoadministrable escribanos al nuestro mail y la asesoraremos para llegar a la mejor solución para usted.',
+  'Para diseñar las web recurrimos a Figma.com, el cual nos permite generar rápidamente un bosquejo para ver como podría ser la web. En cuanto a la programación, utilizamos Wordpress con el plugin de Woocommerce para las tiendas virtuales y para las Landing Page empleamos código con herramientas como Astro.build y Tailwind CSS.',
+  'Así es, por el momento nos enfocamos en diseño y desarrollo de sitios web, más adelante planeamos ofrecer servicios de Marketing Digital y Comunity Manager para cerrar el circulo de Servicios Digitales para aumentar las ventas de pequeños negocios.',
+  'Un dominio web es una dirección única e irrepetible de un sitio web,  que le permitirá a sus clientes ingresar en su pagina, mediante un nombre sencillo y fácil de recordar como uncoder.com.ar.Es comparable a la dirección de una vivienda o una patente de auto.',
+  'Un hosting es un servicio de alojamiento de sitios web en servidores físicos remotos, allí se almacenan todos los archivos y el contenido de tu página para que este disponible para todo el mundo las 24 horas del día. Es comparable a alquilar un local o galpón para poner tu comercio.',
 ];
 ---
 
@@ -29,7 +30,7 @@ let respuestas = [
     {
       preguntas.map((item) => (
         <div class="w-auto">
-          <details class="bg-dark open:ring-1 open:ring-white/10  sm:p-6 p-3 rounded-2xl open:border open:border-dark-tenue ">
+          <details class="bg-dark open:ring-1 open:ring-white/10 pl-0 sm:pl-0 sm:p-6 p-3 rounded-2xl open:border open:border-dark-tenue ">
             <summary class="hover:text-verde transition-all py-3 sm:pr-0 pr-10 cursor-pointer text-xl leading-6 text-light font-medium select-none">
               <h3 class="inline font-medium md:text-2xl sm:text-xl text-lg">{item}</h3>
             </summary>

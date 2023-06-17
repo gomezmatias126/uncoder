@@ -1,11 +1,11 @@
 ---
-const { textoBotonContactoFooter } = Astro.props;
+const { textoBotonContactoFooter, linkBotonContactoFooter } = Astro.props;
 ---
 
 <div class="container mt-28 flex flex-col items-center justify-center gap-0">
   <div class="w-full">
     <a
-      href=""
+      href="/contacto"
       class="transition-all hover:ring hover:ring-violeta rounded-full flex sm:justify-center sm:items-center w-full sm:w-fit items-start gap-4 mx-auto relative sm:px-10 sm:py-7"
     >
       <span
@@ -35,12 +35,12 @@ const { textoBotonContactoFooter } = Astro.props;
   </div>
   <div class="flex flex-col justify-center relative h-[5rem]">
     <a
-      href=""
+      href={linkBotonContactoFooter}
       class="anchor_footer text-light font-medium leading-none text-base transition-all z-20"
       >{textoBotonContactoFooter} aquí...
       </a
     >
-    <div class="anchor_decorador_padre border-b border-light w-10 block self-end ml-auto relative transition-all bg-violeta">
+    <div class="anchor_decorador_padre rounded-full border-b border-light w-10 block self-end ml-auto relative transition-all bg-violeta">
       <div class="transition-all anchor_decorador bg-violeta"></div>
     </div>
   </div>
@@ -64,7 +64,6 @@ const { textoBotonContactoFooter } = Astro.props;
 <style>
   .anchor_footer:hover ~ .anchor_decorador_padre{
     position: absolute;
-    border-radius: 50%;
     height: 5rem;
     width: 5rem;
     z-index: 10;

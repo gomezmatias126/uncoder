@@ -4,8 +4,9 @@ export interface Props {
 	title: string;
 	textoBotonContactoFooter: string;
 	mostrarFooterContacto: Boolean;
+	linkBotonContactoFooter: string;
 }
-let { title, textoBotonContactoFooter, mostrarFooterContacto } = Astro.props;
+let { title, textoBotonContactoFooter, mostrarFooterContacto, linkBotonContactoFooter } = Astro.props;
 import Navbar from "../components/Navbar.astro";
 import BannerContacto from "../components/FooterContacto.astro";
 ---
@@ -26,7 +27,7 @@ import BannerContacto from "../components/FooterContacto.astro";
 		{
 			mostrarFooterContacto &&
 				<footer>
-					<BannerContacto textoBotonContactoFooter={textoBotonContactoFooter} />
+					<BannerContacto {textoBotonContactoFooter} {linkBotonContactoFooter} />
 				</footer>
 		}
 	</body>

@@ -1,7 +1,7 @@
 <div class="container mt-32 sm:mb-20 mb-10">
   <div class="overflow-visible w-max mb-16">
     <h2
-      class="2xl:text-[330px] xl:text-[220px] lg:text-[180px] md:text-[150px] sm:text-9xl text-[75px] font-bold text-transparent bg-gradient-to-br from-violeta via-grey-text to-celeste bg-clip-text text-center"
+      class="2xl:text-[330px] xl:text-[220px] lg:text-[180px] md:text-[150px] sm:text-9xl text-[75px] font-bold text-transparent bg-gradient-to-br from-violeta via-grey-text to-celeste bg-clip-text text-center subpixel-antialiased"
     >
       Contacto
     </h2>
@@ -10,20 +10,16 @@
     class="w-full flex lg:flex-row flex-col gap-20 lg:items-center justify-between"
   >
     <div class="lg:w-8/12 w-full">
-      <form>
+      <form id="form">
         <div
-            class="flex flex-col sm:grid sm:grid-cols-2 [&>div>input]:text-light gap-y-8 gap-x-10 [&>div>input]:bg-gradient-to-bl [&>div>input]:from-dark/[0.98] [&>div>input]:via-dark/[0.93] [&>div>input]:to-dark/[0.98] [&>div>input]:ring-1 sm:[&>div>input]:ring-dark-tenue [&>div>input]:ring-grey/[0.8]"
+          class="flex flex-col sm:grid sm:grid-cols-2 [&>div>input]:text-light gap-y-8 gap-x-10 [&>div>input]:bg-gradient-to-bl [&>div>input]:from-dark/[0.98] [&>div>input]:via-dark/[0.93] [&>div>input]:to-dark/[0.98] [&>div>input]:ring-1 sm:[&>div>input]:ring-dark-tenue [&>div>input]:ring-grey/[0.8]"
         >
           <div class="flex flex-col gap-2">
             <label
               class="md:text-lg sm:text-base text-sm text-light font-medium"
               for="nombre">Nombre</label
             >
-            <input
-              class="rounded-xl px-2 py-4 h-12 "
-              id="nombre"
-              type="text"
-            />
+            <input class="rounded-xl px-2 py-4 h-12" id="nombre" name="nombre" type="text" />
           </div>
           <div class="flex flex-col gap-2">
             <label
@@ -31,9 +27,10 @@
               for="telefono">Telefono</label
             >
             <input
-              class="rounded-xl px-2 py-4 h-12 "
+              class="rounded-xl px-2 py-4 h-12"
               id="telefono"
-              type="text"
+              name="telefono"
+              type="number"
             />
           </div>
           <div class="flex flex-col gap-2">
@@ -41,21 +38,18 @@
               class="md:text-lg sm:text-base text-sm text-light font-medium"
               for="email">Email</label
             >
-            <input
-              class="rounded-xl px-2 py-4 h-12 "
-              id="email"
-              type="text"
-            />
+            <input class="rounded-xl px-2 py-4 h-12" id="email" name="email" type="email" />
           </div>
           <div class="flex flex-col gap-2">
             <label
               class="md:text-lg sm:text-base text-sm text-light font-medium"
-              for="nombre_negocio">Nombre del Negocio *</label
+              for="nombre_negocio">Nombre del Negocio</label
             >
             <input
-              class="rounded-xl px-2 py-4 h-12 "
+              class="rounded-xl px-2 py-4 h-12"
               id="nombre_negocio"
               type="text"
+              name="nombre_negocio"
             />
           </div>
           <div class="flex flex-col gap-2 col-span-2">
@@ -73,8 +67,10 @@
           </div>
           <div>
             <button
+              type="submit"
+              id="btnEnviarForm"
               name="Enviar Mensaje"
-              class="btn_enviar_form sm:px-20 sm:py-4 py-4 leading-none rounded-xl text-grey-light font-regular text-xl leading-0 subpixel-antialiased w-full sm:w-max hover:scale-105 transition-all flex gap-2 items-center justify-center"
+              class="transition-all sm:px-20 sm:py-4 py-4 leading-none rounded-xl text-grey-light font-regular text-xl leading-0 subpixel-antialiased w-full sm:w-max hover:scale-105 flex gap-2 items-center justify-center"
             >
               <span> Enviar Mensaje</span>
               <svg
@@ -91,6 +87,13 @@
               </svg>
             </button>
           </div>
+          <div
+            class="enviado mt-2 font-regular text-xl"
+            id="enviado"
+            aria-roledescription="Indicador del Estado del Mensaje Enviado"
+          >
+            <span>Enviando Mensaje....</span>
+          </div>
         </div>
       </form>
     </div>
@@ -100,7 +103,7 @@
           >Correo</small
         >
         <a
-          href=""
+          href="mailto:info@uncoder.com.ar"
           class="xl:text-2xl lg:text-xl md:text-lg text-base font-medium tracking-wide text-light"
           >info@uncoder.com.ar</a
         >
@@ -110,7 +113,9 @@
           >Whatsapp (Solo Mensajes)</small
         >
         <a
-          href=""
+          href="https://wa.me/+543517608584"
+          rel="external"
+          target="_blank"
           class="xl:text-2xl lg:text-xl md:text-lg text-base font-medium tracking-wide text-light"
           >351 760 8584</a
         >
@@ -137,12 +142,16 @@
       </div>
       <div class="mt-5 flex sm:gap-5 gap-8">
         <a
-          href=""
+          href="https://www.linkedin.com/in/matias-gomez-676ab3230/"
+          rel="external"
+          target="_blank"
           class="hover:ring-violeta hover:text-violeta transition-colors ring-2 ring-grey px-6 rounded-3xl py-3 xl:text-2xl lg:text-xl md:text-lg text-base font-medium text-grey-text"
           >LinkedIn</a
         >
         <a
-          href=""
+          href="https://github.com/gomez-matias"
+          rel="external"
+          target="_blank"
           class="hover:ring-celeste hover:text-celeste transition-colors ring-2 ring-grey px-6 rounded-3xl py-3 xl:text-2xl lg:text-xl md:text-lg text-base font-medium text-grey-text"
           >GitHub</a
         >
@@ -169,12 +178,79 @@
 </footer>
 
 <style>
-  .btn_enviar_form {
-    background: linear-gradient(
-      92.16deg,
-      #3ac989 0%,
-      #9747ff 51.04%,
-      #8cd6f7 100%
-    );
+  #btnEnviarForm {
+    background: linear-gradient(90deg, #3ac989 0%, #9747ff 50%, #8cd6f7 100%);
+  }
+  #btnEnviarForm:hover {
+    background: linear-gradient(50deg, #3ac989 0%, #9747ff 50%, #8cd6f7 100%);
+  }
+  .enviado {
+    visibility: hidden;
+    color: white;
+    background-color: slateblue;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .enviado.error {
+    background-color: red;
+    color: black;
+    visibility: visible;
+  }
+  .enviado.sended {
+    background-color: greenyellow;
+    color: black;
+    visibility: visible;
   }
 </style>
+
+<script>
+  const formulario = document.getElementById("form");
+  const respuesta = document.getElementById("enviado");
+  const btnEnviarForm = document.getElementById("btnEnviarForm");
+
+  function enable__form() {
+    btnEnviarForm.disabled = false;
+    setTimeout(() => {
+      respuesta.style.visibility = "hidden";
+    }, 10000);
+  }
+  formulario.addEventListener("submit", function (e) {
+    respuesta.textContent = "Enviando Mensaje...";
+    respuesta.style.visibility = "visible";
+    e.preventDefault();
+    btnEnviarForm.disabled = true;
+    var datos = new FormData(formulario);
+    fetch("/php/post.php", {
+      method: "POST",
+      body: datos,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        respuesta.textContent = data;
+        if (data.includes("Error")) {
+          respuesta.classList.add("error");
+          enable__form();
+          setTimeout(() => {
+            respuesta.classList.remove("error");
+          }, 10000);
+        } else {
+          respuesta.classList.add("sended");
+          formulario.reset();
+          enable__form();
+          setTimeout(() => {
+            respuesta.classList.remove("sended");
+          }, 10000);
+        }
+      })
+      .catch((err) => {
+        respuesta.textContent =
+          "Hay fallas en el envio, intente por otra via de contacto";
+        respuesta.classList.add("error");
+        enable__form();
+        setTimeout(() => {
+          respuesta.classList.remove("error");
+        }, 10000);
+      });
+  });
+</script>
