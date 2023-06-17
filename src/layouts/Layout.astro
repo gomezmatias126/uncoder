@@ -1,20 +1,20 @@
 ---
-
-import '@fontsource/dm-sans';
+import "@fontsource/dm-sans";
 export interface Props {
 	title: string;
 	textoBotonContactoFooter: string;
+	mostrarFooterContacto: Boolean;
 }
-const { title, textoBotonContactoFooter } = Astro.props;
-import Navbar from '../components/Navbar.astro'
-import BannerContacto from '../components/BannerContacto.astro';
+let { title, textoBotonContactoFooter, mostrarFooterContacto } = Astro.props;
+import Navbar from "../components/Navbar.astro";
+import BannerContacto from "../components/FooterContacto.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="overflow-x-hidden">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -23,10 +23,12 @@ import BannerContacto from '../components/BannerContacto.astro';
 	<body class="bg-dark text-light scroll-smooth">
 		<Navbar />
 		<slot />
-		<footer>
-			<BannerContacto textoBotonContactoFooter={textoBotonContactoFooter} />
-		</footer>
+		{
+			mostrarFooterContacto &&
+				<footer>
+					<BannerContacto textoBotonContactoFooter={textoBotonContactoFooter} />
+				</footer>
+		}
 	</body>
 </html>
-<style>
-</style>
+<style></style>

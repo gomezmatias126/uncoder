@@ -1,0 +1,57 @@
+---
+import ContactoContenido from "../components/ContactoContenido.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Uncoder Diseño Web"
+  textoBotonContactoFooter="Si no, vea mis trabajos"
+  mostrarFooterContacto={false}
+>
+  <!-- <main class="main relative z-40 snap-y snap-proximity overflow-auto overflow-x-hidden w-screen h-screen"> -->
+  <main class="main main_contacto relative z-40">
+    <section class="relative z-40">
+      <ContactoContenido />
+    </section>
+    {/*<div id="fondo_contacto" class="absolute top-0 w-screen h-full z-30">
+      <div class="relative">
+        <svg
+          class="vector_fondo_contacto absolute"
+          width="1204"
+          height="913"
+          viewBox="0 0 1204 913"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            opacity="0.8"
+            d="M648.153 693.644C1022.95 704.814 812.818 152.299 1203.95 -240.992C1148.81 -306.722 959.731 -419.301 644.452 -343.773C250.354 -249.363 611.942 -28.1076 533.059 186.468C454.176 401.044 -90.5268 263.754 -163.306 499.286C-221.529 687.711 -140.887 853.578 -93.2878 912.958C28.9257 836.13 348.313 684.708 648.153 693.644Z"
+            fill="#8CD6F7"></path>
+        </svg>
+
+        <svg
+          class="elipse_fondo_contacto absolute"
+          width="1104"
+          height="953"
+          viewBox="0 0 1104 953"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            opacity="0.8"
+            d="M1438.67 209.38C1442.26 319.642 1420.44 429.252 1374.89 529.732C1329.35 630.211 1261.3 718.868 1176.01 788.843C1090.73 858.819 990.486 908.238 883.045 933.279C775.605 958.319 663.844 958.31 556.407 933.251C448.971 908.192 348.739 858.755 263.464 788.765C178.188 718.774 110.156 630.106 64.628 529.618C19.1003 429.131 -2.70223 319.517 0.906889 209.256C4.516 98.9951 33.44 -8.95808 85.4416 -106.253L719.787 232.787L1438.67 209.38Z"
+            fill="#3AC989"></path>
+        </svg>
+      </div>
+    </div>*/}
+  </main>
+</Layout>
+
+<style>
+  .main_contacto::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+</style>
