@@ -20,18 +20,18 @@ let utilidades = [
 
 <div class="container my-36">
   <h2
-    class="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-[3rem] font-bold md:mb-10 sm:mb-7 mb-5"
+    class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold md:mb-10 sm:mb-7 mb-5"
   >
     Cual es la utilidad de una página web?
   </h2>
   <p class="xl:text-2xl lg:text-xl md:text-lg text-lg font-medium md:mb-10 sm:mb-7 mb-5 text-grey-light">Le permite a sus clientes sacarse las dudas y explorar todo lo que usted puede ofrecer en su negocio</p>
   <div class="xl:mt-20 md:mt-16 sm:mt-14 mt-10">
-    <ul class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-y-14 gap-y-5">
+    <ul class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-y-14 gap-y-9">
       {
         utilidades.map((item) => (
-          <li class="item_utilidad flex items-center gap-2 border border-dark-tenue px-4 py-3 w-fit rounded-3xl font-regular md:text-xl sm:text-lg text-base text-light">
+          <li class="item_utilidad flex items-center gap-2 border border-dark-tenue px-4 sm:py-3 py-2 w-fit rounded-3xl font-regular md:text-xl sm:text-lg text-base text-light">
             <svg
-              class="w-4"
+              class="w-4 [&>circle]:fill-celeste"
               width="26"
               height="25"
               viewBox="0 0 26 25"
@@ -42,8 +42,6 @@ let utilidades = [
                 cx="13"
                 cy="12.5"
                 r="12.5"
-                fill="#8CD6F7"
-                fill-opacity="0.5"
               />
               <path
                 d="M11.1765 21C10.6793 21 10.2084 20.768 9.9067 20.3679L5.82289 14.972C5.69663 14.8054 5.60445 14.6155 5.55162 14.4132C5.4988 14.2109 5.48636 14.0002 5.51502 13.7931C5.54368 13.586 5.61288 13.3866 5.71865 13.2062C5.82443 13.0259 5.96472 12.8682 6.13149 12.7421C6.2982 12.6155 6.48826 12.523 6.69077 12.47C6.89329 12.417 7.10427 12.4044 7.31164 12.4331C7.51901 12.4618 7.71868 12.5311 7.89921 12.637C8.07975 12.743 8.23759 12.8836 8.3637 13.0507L11.0508 16.5984L17.8069 5.74943C18.0309 5.39123 18.3879 5.13652 18.7995 5.04117C19.2111 4.94582 19.6438 5.01762 20.0025 5.24082C20.7489 5.70486 20.9786 6.68781 20.5123 7.43531L12.5298 20.2479C12.3935 20.4676 12.2057 20.6508 11.9826 20.7814C11.7596 20.9121 11.508 20.9863 11.2497 20.9977C11.2245 21 11.2017 21 11.1765 21Z"

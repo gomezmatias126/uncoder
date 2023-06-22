@@ -7,26 +7,65 @@ import Dudas from "../components/Dudas.astro";
 import ExtrasLanding from "../components/ExtrasLanding.astro";
 ---
 
-<Layout title="Uncoder Diseño Web" mostrarFooterContacto={true} textoBotonContactoFooter="Si no, vea mis trabajos" linkBotonContactoFooter="/trabajos">
+<Layout
+	title="Uncoder Diseño Web"
+	mostrarFooterContacto={true}
+	textoBotonContactoFooter="Si no, vea mis trabajos"
+	linkBotonContactoFooter="/trabajos"
+>
 	<!-- <main class="main relative z-40 snap-y snap-proximity overflow-auto overflow-x-hidden w-screen h-screen"> -->
 	<main class="main relative z-40">
-		<section id="hero" class="">
+		<span class="container_fondo_noise absolute top-0 left-0 z-30 w-full h-[2000px]"></span>
+		<div
+			class="absolute z-20 top-0 w-full max-w-[2400px] overflow-x-hidden left-1/2 -translate-x-1/2 h-[2000px] [&>div>*]:absolute [&>div>svg]:z-20 [&>div>svg]:blur-3xl"
+		>
+			<div class="relative w-full z-20 h-full">
+				<svg
+					class="left-2/4 top-[5%] opacity-80 -translate-x-1/4 fill-verde xl:w-8/12 lg:w-10/12 md:w-11/12 w-full h-auto"
+					width="1204"
+					height="913"
+					viewBox="0 0 1204 913"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M648.153 693.644C1022.95 704.814 812.818 152.299 1203.95 -240.992C1148.81 -306.722 959.731 -419.301 644.452 -343.773C250.354 -249.363 611.942 -28.1076 533.059 186.468C454.176 401.044 -90.5268 263.754 -163.306 499.286C-221.529 687.711 -140.887 853.578 -93.2878 912.958C28.9257 836.13 348.313 684.708 648.153 693.644Z"
+						></path>
+				</svg>
+				<svg
+					class="right-2/4 md:top-[5%] opacity-60 top-[20%] translate-x-1/4 fill-violeta xl:w-8/12 lg:w-10/12 md:w-11/12 w-full h-auto"
+					width="1104"
+					height="953"
+					viewBox="0 0 1104 953"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M1438.67 209.38C1442.26 319.642 1420.44 429.252 1374.89 529.732C1329.35 630.211 1261.3 718.868 1176.01 788.843C1090.73 858.819 990.486 908.238 883.045 933.279C775.605 958.319 663.844 958.31 556.407 933.251C448.971 908.192 348.739 858.755 263.464 788.765C178.188 718.774 110.156 630.106 64.628 529.618C19.1003 429.131 -2.70222 319.517 0.906887 209.256C4.516 98.9951 33.44 -8.95808 85.4416 -106.253L719.787 232.787L1438.67 209.38Z"></path>
+				</svg>
+			</div>
+		</div>
+		<section id="hero" class="relative z-40">
 			<Hero />
 		</section>
-		<section id="banner_trabajos" class="scroll-mt-28 snap-start">
+		<section id="banner_trabajos" class="scroll-mt-28 snap-start relative z-40">
 			<BannerTrabajos />
 		</section>
-		<section id="servicios" class="scroll-mt-28 snap-start">
+		<section id="servicios" class="scroll-mt-28 snap-start relative z-40">
 			<ServiciosLanding />
 		</section>
 		<section id="preguntas_frecuentes" class="scroll-mt-28 snap-start">
 			<Dudas />
 		</section>
-		<section id="razones_para_tener_una_pagina_web" class="scroll-mt-28 snap-start">
+		<section
+			id="razones_para_tener_una_pagina_web"
+			class="scroll-mt-28 snap-start"
+		>
 			<ExtrasLanding />
 		</section>
 	</main>
 
 	<style>
+		.container_fondo_noise {
+			background: linear-gradient(to bottom, transparent, #090A05) ,url(data:imagavif;base64,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);
+		}
 	</style>
 </Layout>

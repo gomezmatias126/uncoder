@@ -3,8 +3,9 @@ const nav_item = ["servicios", "precios", "trabajos"];
 let barrita = "/";
 ---
 
-<header id="header_navbar"
-  class="w-full h-20 bg-dark flex items-center justify-center fixed z-50 top-0 transition-all"
+<header
+  id="header_navbar"
+  class="w-full h-20 flex items-center justify-center fixed z-50 top-0 transition-all"
 >
   <nav class="container static">
     <ul
@@ -15,19 +16,28 @@ let barrita = "/";
       </li>
       <li
         id="item_navbar_links"
-        class="lista_item_navbar md:flex hidden bg-dark/[0.95] md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent md:top-0 top-full left-0 w-full flex-col items-center sm:font-medium font-bold gap-10 md:text-base text-4xl capitalize"
+        class="lista_item_navbar md:flex hidden bg-dark/[0.95] md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent md:top-0 top-full left-0 w-full flex-col items-center sm:font-medium font-bold gap-10 md:text-base text-4xl capitalize transition-all"
       >
-        {nav_item.map((item) => <a href={item === 'servicios' ? '/#' + item : barrita + item}>{item}</a>)}
+        {
+          nav_item.map((item) => (
+            <a
+              class="hover:scale-105 hover:text-celeste"
+              href={item === "servicios" ? "/#" + item : barrita + item}
+            >
+              {item}
+            </a>
+          ))
+        }
         <a
           href="/contacto"
-          class="visible md:hidden bg-light px-10 py-3 text-dark font-bold rounded-3xl"
+          class="hover:bg-gradient-to-bl hover:from-celeste hover:via-light hover:to-celeste visible md:hidden bg-light px-10 py-3 text-dark font-bold rounded-3xl"
           >Pedí Tu Página</a
         >
       </li>
       <li class="md:flex hidden md:flex-grow md:basis-0 md:justify-end">
         <a
           href="/contacto"
-          class="bg-light px-10 py-3 text-dark font-bold rounded-3xl"
+          class="hover:bg-gradient-to-br hover:from-celeste hover:via-violeta hover:text-light hover:scale-95 transition-all hover:to-celeste bg-light px-10 py-3 text-dark font-bold rounded-3xl"
           >Pedí Tu Página</a
         >
       </li>
@@ -80,7 +90,7 @@ let barrita = "/";
   const btn_toggle_navbar_svg_open = document.getElementById(
     "btn_toggle_navbar_svg_open"
   );
-  const header_navbar = document.getElementById('header_navbar');
+  const header_navbar = document.getElementById("header_navbar");
   let prevScrollpos = window.pageYOffset;
 
   function toggleMenu() {
@@ -89,8 +99,10 @@ let barrita = "/";
     item_navbar_links.classList.toggle("hidden");
     item_navbar_links.classList.toggle("flex");
     if (item_navbar_links.classList.contains("hidden") === false) {
+      header_navbar.classList.add("bg-dark");
       item_navbar_links.addEventListener("click", toggleMenu);
     } else {
+      if(window.pageYOffset <= 100) header_navbar.classList.remove("bg-dark");
       item_navbar_links.removeEventListener("click", toggleMenu);
     }
   }
@@ -98,7 +110,15 @@ let barrita = "/";
 
   window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
-    if (btn_toggle_navbar_svg_close.classList.contains("hidden") === false) return;
+    if (btn_toggle_navbar_svg_close.classList.contains("hidden") === false)
+      return;
+    if (window.pageYOffset >= 100) {
+      header_navbar.classList.add("bg-dark");
+    } else {
+      if (item_navbar_links.classList.contains("hidden") !== false){
+        header_navbar.classList.remove("bg-dark");
+      }
+    }
     if (prevScrollpos > currentScrollPos) {
       header_navbar.style.top = "0";
     } else {

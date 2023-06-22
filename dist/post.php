@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  $destino = 'adrelx7@imset.com.ar';
+  $destino = 'adrelx7@gmail.com';
   $nombre = htmlspecialchars($_POST['nombre']);
   $email = htmlspecialchars($_POST['email']);
   $telefono = htmlspecialchars($_POST['telefono']);
