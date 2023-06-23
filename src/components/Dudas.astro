@@ -10,13 +10,13 @@ let preguntas = [
 ];
 
 let respuestas = [
-  'Podes pagar por transferencia bancaria y/o mediante un link de pago de Mercadopago, una vez que tú página este completamente lista y operativa en internet.',
-  'La creación de una Landing Page demora entre 5 a 10 días, dependiendo del diseño y la entrega de contenidos de parte del cliente. La creación de un Ecommerce suele demorar entre 2 a 3 semanas, nuevamente dependiendo del diseño y la complejidad de la tienda, así como las configuraciones que dependan del cliente, como las credenciales para los medios de pago y los servicios de envió como oca, andreani, etc.',
-  'Dependiendo del tipo de página web que haya escogido podra administrarla usted mismo, cambiando tanto el diseño como las funcionalidades avanzadas de su página. Para solicitar una web autoadministrable escribanos al nuestro mail y la asesoraremos para llegar a la mejor solución para usted.',
-  'Para diseñar las web recurrimos a Figma.com, el cual nos permite generar rápidamente un bosquejo para ver como podría ser la web. En cuanto a la programación, utilizamos Wordpress con el plugin de Woocommerce para las tiendas virtuales y para las Landing Page empleamos código con herramientas como Astro.build y Tailwind CSS.',
-  'Así es, por el momento nos enfocamos en diseño y desarrollo de sitios web, más adelante planeamos ofrecer servicios de Marketing Digital y Comunity Manager para cerrar el circulo de Servicios Digitales para aumentar las ventas de pequeños negocios.',
-  'Un dominio web es una dirección única e irrepetible de un sitio web,  que le permitirá a sus clientes ingresar en su pagina, mediante un nombre sencillo y fácil de recordar como uncoder.com.ar.Es comparable a la dirección de una vivienda o una patente de auto.',
-  'Un hosting es un servicio de alojamiento de sitios web en servidores físicos remotos, allí se almacenan todos los archivos y el contenido de tu página para que este disponible para todo el mundo las 24 horas del día. Es comparable a alquilar un local o galpón para poner tu comercio.',
+  "Podes pagar por transferencia bancaria y/o mediante un link de pago de Mercadopago, una vez que tú página este completamente lista y operativa en internet.",
+  "La creación de una Landing Page demora entre 5 a 10 días, dependiendo del diseño y la entrega de contenidos de parte del cliente. La creación de un Ecommerce suele demorar entre 2 a 3 semanas, nuevamente dependiendo del diseño y la complejidad de la tienda, así como las configuraciones que dependan del cliente, como las credenciales para los medios de pago y los servicios de envió como oca, andreani, etc.",
+  "Dependiendo del tipo de página web que haya escogido podra administrarla usted mismo, cambiando tanto el diseño como las funcionalidades avanzadas de su página. Para solicitar una web autoadministrable escribanos al nuestro mail y la asesoraremos para llegar a la mejor solución para usted.",
+  "Para diseñar las web recurrimos a Figma.com, el cual nos permite generar rápidamente un bosquejo para ver como podría ser la web. En cuanto a la programación, utilizamos Wordpress con el plugin de Woocommerce para las tiendas virtuales y para las Landing Page empleamos código con herramientas como Astro.build y Tailwind CSS.",
+  "Así es, por el momento nos enfocamos en diseño y desarrollo de sitios web, más adelante planeamos ofrecer servicios de Marketing Digital y Comunity Manager para cerrar el circulo de Servicios Digitales para aumentar las ventas de pequeños negocios.",
+  "Un dominio web es una dirección única e irrepetible de un sitio web,  que le permitirá a sus clientes ingresar en su pagina, mediante un nombre sencillo y fácil de recordar como uncoder.com.ar.Es comparable a la dirección de una vivienda o una patente de auto.",
+  "Un hosting es un servicio de alojamiento de sitios web en servidores físicos remotos, allí se almacenan todos los archivos y el contenido de tu página para que este disponible para todo el mundo las 24 horas del día. Es comparable a alquilar un local o galpón para poner tu comercio.",
 ];
 ---
 
@@ -32,10 +32,14 @@ let respuestas = [
         <div class="w-auto">
           <details class="bg-dark sm:py-6 py-3 open:border-y-2 open:border-dark-light open:border-dashed">
             <summary class="hover:text-verde transition-all sm:py-3 pt-3 sm:pr-0 pr-10 cursor-pointer text-xl leading-6 text-light font-medium select-none">
-              <h3 class="inline font-medium md:text-2xl sm:text-xl text-lg">{item}</h3>
+              <h3 class="inline font-medium md:text-2xl sm:text-xl text-lg">
+                {item}
+              </h3>
             </summary>
             <div class="container_respuesta mt-3 text-base leading-6 text-grey-light">
-              <p class="font-regular md:text-xl sm:text-lg text-base sm:text-grey-text text-grey-light">{respuestas[preguntas.indexOf(item)]}</p>
+              <p class="font-regular md:text-xl sm:text-lg text-base sm:text-grey-text text-grey-light">
+                {respuestas[preguntas.indexOf(item)]}
+              </p>
             </div>
           </details>
         </div>
@@ -46,112 +50,141 @@ let respuestas = [
 
 <style>
   :root {
-  --accordion-min-height: 56px;
-  --accordion-max-height: 300px;
-}
+    --accordion-min-height: 56px;
+    --accordion-max-height: 300px;
+  }
 
-details {
-  margin: 0 auto ;
-  margin-bottom: .5rem;
-  overflow: hidden;
-  animation-name: accordion-close;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  transform-origin: top;
-}
+  details {
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    animation-name: accordion-close;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    transform-origin: top;
+  }
 
-details[open] {
-  animation-name: accordion-master;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  transform-origin: top;
-}
+  details[open] {
+    animation-name: accordion-master;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    transform-origin: top;
+  }
 
-@keyframes accordion-master {
-  from {max-height: var(--accordion-min-height);}
-  to {max-height: var(--accordion-max-height);}
-}
+  @keyframes accordion-master {
+    from {
+      max-height: var(--accordion-min-height);
+    }
+    to {
+      max-height: var(--accordion-max-height);
+    }
+  }
 
-@keyframes accordion-close {
-  from {min-height: var(--accordion-max-height);}
-  to {min-height: var(--accordion-min-height);}
-}
+  @keyframes accordion-close {
+    from {
+      min-height: var(--accordion-max-height);
+    }
+    to {
+      min-height: var(--accordion-min-height);
+    }
+  }
 
-summary {
-  display: block;
-  position: relative;
-  cursor: pointer;
-}
+  summary {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
 
-summary:before {
-  content: '';
-background-image: url(/img/flecha_preguntas.svg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  top: 1rem;
-  right: 0.5rem;
-  transform: rotate(90deg);
-  transition: .25s transform ease;
-}
+  summary:before {
+    content: "";
+    background-image: url(/img/flecha_preguntas.svg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 1rem;
+    right: 0.5rem;
+    transform: rotate(90deg);
+    transition: 0.25s transform ease;
+  }
 
-/* THE MAGIC 🧙‍♀️ */
-details[open] > summary:before {
-  transform: rotate(270deg);
-}
+  /* THE MAGIC 🧙‍♀️ */
+  details[open] > summary:before {
+    transform: rotate(270deg);
+  }
 
-details summary{
-  list-style: none;
-}
+  details summary {
+    list-style: none;
+  }
 
-details > .container_respuesta {
-  padding-bottom: 1rem;
-  margin-bottom: 0;
-  opacity: 0;
-  transition: 0.3s;
-  height: 0;
-  margin-top: 0;
-  padding-top: 1rem;
-  animation-name: accordion-content-close;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-}
+  details > .container_respuesta {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    opacity: 0;
+    height: 0;
+    margin-top: 0;
+    padding-top: 1rem;
+    animation-name: accordion-content-close;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
 
-details[open] > .container_respuesta {
-  opacity: 1;
-  height: auto;
-  animation-name: accordion;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  transform-origin: top;
-}
+  details[open] > .container_respuesta {
+    opacity: 1;
+    height: auto;
+    animation-name: accordion;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    transform-origin: top;
+  }
 
-@keyframes accordion {
-  from {transform: scaleY(0); opacity: 0;}
-  to {transform: scaleY(1); opacity: 1;}
-}
+  @keyframes accordion {
+    from {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
 
-@keyframes accordion-content-close {
-  from {margin-top: 0;}
-  to {margin-top: -300px;}
-}
+  @keyframes accordion-content-close {
+    from {
+      margin-top: 0;
+    }
+    to {
+      margin-top: -300px;
+    }
+  }
 
-details[open] > .container_respuesta > p {
-  opacity: 0;
-  animation-name: accordion-content;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes accordion-content {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
+  details[open] > .container_respuesta > p {
+    opacity: 0;
+    animation-name: accordion-content;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes accordion-content {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 </style>
 
 <script>

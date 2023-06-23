@@ -2,11 +2,11 @@
 const { textoBotonContactoFooter, linkBotonContactoFooter } = Astro.props;
 ---
 
-<div class="container mt-28 flex flex-col items-center justify-center gap-0 static z-40">
+<div class="container mt-48 flex flex-col items-center justify-center gap-0 relative z-40">
   <div class="w-full">
     <a
       href="/contacto"
-      class="transition-all hover:ring hover:ring-violeta rounded-full flex sm:justify-center sm:items-center w-full sm:w-fit [&>svg>path]:hover:fill-violeta sm:[&>span]:hover:animate-bounce sm:[&>svg>path]:hover:animate-bounce items-start gap-4 mx-auto relative sm:px-10 sm:py-7"
+      class="rounded-full flex sm:justify-center sm:items-center w-full sm:w-fit items-start gap-4 mx-auto relative sm:px-10 sm:py-7 overflow-visible animacion_boton box"
     >
       <span
         class="relative z-[11] xl:text-9xl lg:text-8xl md:text-7xl sm:text-6xl text-[3rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-celeste from-10% via-naranja via-50% to-violeta to-100%"
@@ -14,7 +14,7 @@ const { textoBotonContactoFooter, linkBotonContactoFooter } = Astro.props;
         Contáctese
       </span>
       <svg
-        class="rounded-full sm:relative absolute sm:top-0 top-1/2 sm:translate-y-0 -translate-y-1/2 right-0 z-10 h-auto hover:[&>circle]:opacity-100 hover:[&>path]:fill-violeta cursor-pointer xl:w-36 lg:w-32 md:w-28 sm:w-24 w-20 sm:opacity-100 opacity-90"
+        class="contacto_svg rounded-full sm:relative absolute sm:top-0 top-1/2 sm:translate-y-0 -translate-y-1/2 right-0 z-10 h-auto cursor-pointer xl:w-36 lg:w-32 md:w-28 sm:w-24 w-20 sm:opacity-100 opacity-80"
         width="120"
         height="120"
         viewBox="0 0 120 120"
@@ -25,9 +25,9 @@ const { textoBotonContactoFooter, linkBotonContactoFooter } = Astro.props;
           cx="60"
           cy="60"
           r="60"
-          class="peer peer-hover:fill-red-300 fill-light"></circle>
+          class="contacto_svg_circle fill-light"></circle>
         <path
-          class="peer peer-hover:fill-violeta"
+          class="contacto_svg_path"
           d="M93.8998 28.9419L23.2939 57.1772L49.6351 69.089L86.841 36.0007L53.7528 73.2066L65.6645 99.5301L93.8998 28.9419Z"
           fill="#090A05"></path>
       </svg>
@@ -35,17 +35,15 @@ const { textoBotonContactoFooter, linkBotonContactoFooter } = Astro.props;
   </div>
   <div class="flex flex-col justify-center relative h-[5rem]">
     <a
-      href={linkBotonContactoFooter}
-      class="anchor_footer text-light font-medium leading-none text-base transition-all z-20"
-      >{textoBotonContactoFooter} aquí...
-      </a
+    href={linkBotonContactoFooter}
+    class="anchor_footer p-1 relative text-light font-medium leading-none text-base z-40"
+    >{textoBotonContactoFooter} aquí...
+    </a
     >
-    <div class="anchor_decorador_padre rounded-full border-b border-light w-10 block self-end ml-auto relative transition-all bg-violeta">
-      <div class="transition-all anchor_decorador bg-violeta"></div>
-    </div>
+    <span class="anchor_footer_animacion"></span>
   </div>
 </div>
-<div class="w-full h-auto overflow-hidden">
+<div class="relative z-40 w-full h-auto overflow-hidden">
   <svg
     class="static w-screen max-w-[1920px] h-auto mx-auto"
     width="1600"
@@ -63,14 +61,48 @@ const { textoBotonContactoFooter, linkBotonContactoFooter } = Astro.props;
 </div>
 
 <style>
-  .anchor_footer:hover ~ .anchor_decorador_padre{
+  .anchor_footer_animacion{
     position: absolute;
     height: 5rem;
     width: 5rem;
+    background: #883BFF;
     z-index: 10;
-    right: -10%;
-    bottom: 0%;
-    border: none;
+    border-radius: 100%;
+    left: 20%;
+    bottom: 50%;
+    translate: 0% 50%;
+    opacity: 0%;
+    will-change: transform opacity visibility;
+    transition: transform 600ms, opacity 500ms;
+  }
+  .anchor_footer:hover + .anchor_footer_animacion{
+    opacity: 100%;
+    transition: transform 1000ms, opacity 1000ms;
+    transform: translateX(100%);
+  }
+  .animacion_boton.box{
+    transition: transform 750ms;
+    will-change: transform;
+  }
+  .contacto_svg {
+    transition: opacity 750ms;
+    will-change: opacity;
+  }
+  .contacto_svg_path {
+    transition: fill 750ms;
+    will-change: fill;
   }
 
+  .animacion_boton.box:hover,
+  .animacion_boton.box:focus {
+    transform: translateY(-20px);
+  }
+  .animacion_boton.box:hover .contacto_svg,
+  .animacion_boton.box:focus .contacto_svg {
+    opacity: 100%;
+  }
+  .animacion_boton.box:hover .contacto_svg_path,
+  .animacion_boton.box:hover .contacto_svg_path {
+    fill: #883BFF;
+  }
 </style>

@@ -30,14 +30,14 @@ let barrita = "/";
         }
         <a
           href="/contacto"
-          class="hover:bg-gradient-to-bl hover:from-celeste hover:via-light hover:to-celeste visible md:hidden bg-light px-10 py-3 text-dark font-bold rounded-3xl"
+          class="visible md:hidden bg-light px-10 py-3 text-dark font-bold rounded-3xl"
           >Pedí Tu Página</a
         >
       </li>
       <li class="md:flex hidden md:flex-grow md:basis-0 md:justify-end">
         <a
           href="/contacto"
-          class="hover:bg-gradient-to-br hover:from-celeste hover:via-violeta hover:text-light hover:scale-95 transition-all hover:to-celeste bg-light px-10 py-3 text-dark font-bold rounded-3xl"
+          class="bg-light px-10 py-3 text-dark font-bold rounded-3xl btn_animacion"
           >Pedí Tu Página</a
         >
       </li>
@@ -83,7 +83,6 @@ let barrita = "/";
 <script>
   const btn_toggle_navbar = document.getElementById("btn_toggle_navbar");
   const item_navbar_links = document.getElementById("item_navbar_links");
-  const body = document.body;
   const btn_toggle_navbar_svg_close = document.getElementById(
     "btn_toggle_navbar_svg_close"
   );
@@ -91,7 +90,7 @@ let barrita = "/";
     "btn_toggle_navbar_svg_open"
   );
   const header_navbar = document.getElementById("header_navbar");
-  let prevScrollpos = window.pageYOffset;
+  let prevScrollpos = window.scrollY;
 
   function toggleMenu() {
     btn_toggle_navbar_svg_close.classList.toggle("hidden");
@@ -102,17 +101,17 @@ let barrita = "/";
       header_navbar.classList.add("bg-dark");
       item_navbar_links.addEventListener("click", toggleMenu);
     } else {
-      if(window.pageYOffset <= 100) header_navbar.classList.remove("bg-dark");
+      if(window.scrollY <= 100) header_navbar.classList.remove("bg-dark");
       item_navbar_links.removeEventListener("click", toggleMenu);
     }
   }
   btn_toggle_navbar.addEventListener("click", toggleMenu);
 
   window.onscroll = function () {
-    let currentScrollPos = window.pageYOffset;
+    let currentScrollPos = window.scrollY;
     if (btn_toggle_navbar_svg_close.classList.contains("hidden") === false)
       return;
-    if (window.pageYOffset >= 100) {
+    if (window.scrollY >= 100) {
       header_navbar.classList.add("bg-dark");
     } else {
       if (item_navbar_links.classList.contains("hidden") !== false){
@@ -133,5 +132,17 @@ let barrita = "/";
     .lista_item_navbar {
       height: calc(100vh - 5rem);
     }
+  }
+  .btn_animacion{
+    transition: scale 750ms, background-color 1000ms, color 1000ms, font-weight 500ms;
+    will-change: scale, background-color, color, font-weight;
+  }
+
+  .btn_animacion:hover,
+  .btn_animacion:focus {
+    font-weight: normal;
+    color: #FCFEFF;
+    background-color: #883BFF;
+    scale: 1.04;
   }
 </style>
