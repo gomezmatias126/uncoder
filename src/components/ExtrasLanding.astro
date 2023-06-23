@@ -1,35 +1,38 @@
 ---
+
+  
+
 let utilidades = [
-  "Que Servicios ofrecen?",
-  "Cuales son sus Horarios?",
-  "Donde está Ubicado?",
-  "Como me Contacto?",
-  "Que Productos Ofrece?",
-  "Cuales son sus Aptitudes?",
-  "Puedo ver los Precios?",
-  "Preguntas Frecuentes",
-  "Redes Sociales?",
-  "Su Proceso de Trabajo",
-  "Cuente su historia",
-  "Brinde Turnos",
+  "¿Qué Servicios ofrecen?",
+  "¿Cuáles son sus Horarios?",
+  "¿Dónde está Ubicado?",
+  "¿Cómo me Contacto?",
+  "¿Qué Productos Ofrece?",
+  "¿Cuáles son sus Aptitudes?",
+  "¿Puedo ver los Precios?",
+  "¿Qué Marcas Ofrece?",
+  "¿Cómo es el Local Físico?",
+  "¿Redes Sociales?",
   "Realice Cotizaciones",
-  "Como es el Local Físico?",
-  "Que Marcas Ofrece?",
+  "Cuente su historia",
+  "Muestre su Proceso de Trabajo",
+  "Brinde Turnos",
+  "Responda Preguntas Frecuentes"
 ];
 ---
 
 <div class="container my-36">
   <h2
-    class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold md:mb-10 sm:mb-7 mb-5"
+    class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold md:mb-10 sm:mb-7 mb-5 text-light"
   >
     Cual es la utilidad de una página web?
   </h2>
-  <p class="xl:text-2xl lg:text-xl md:text-lg text-lg font-medium md:mb-10 sm:mb-7 mb-5 text-grey-light">Le permite a sus clientes sacarse las dudas y explorar todo lo que usted puede ofrecer en su negocio</p>
+  <p class="xl:text-2xl lg:text-xl md:text-lg text-lg font-medium md:mb-10 sm:mb-7 mb-5 text-grey-text">Le permite a sus clientes sacarse las dudas y explorar todo lo que usted puede ofrecer en su negocio</p>
   <div class="xl:mt-20 md:mt-16 sm:mt-14 mt-10">
     <ul class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-y-14 gap-y-9">
       {
         utilidades.map((item) => (
-          <li class="item_utilidad flex items-center gap-2 border border-dark-tenue px-4 sm:py-3 py-2 w-fit rounded-3xl font-regular md:text-xl sm:text-lg text-base text-light">
+          <li class="item_utilidad flex items-center gap-2 border border-dark-tenue px-4 sm:py-3 py-2 w-fit rounded-3xl font-regular md:text-xl sm:text-lg text-base text-grey-light">
             <svg
               class="w-4 [&>circle]:fill-celeste"
               width="26"
