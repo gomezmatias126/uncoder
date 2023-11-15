@@ -242,7 +242,7 @@
     e.preventDefault();
     btnEnviarForm.disabled = true;
     var datos = new FormData(formulario);
-    fetch("https://email.uncoder.com.ar/", {
+    fetch("https://enviar-emailsdesdehtml.gomezmatias126.workers.dev/", {
       method: "POST",
       body: datos,
     })
