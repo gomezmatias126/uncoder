@@ -1,34 +1,106 @@
 ---
 let caracteristicasLandingPrecios = [
-  "Diseño Personalizado",
-  "Google Maps",
-  "5 Secciones a Elección",
-  "Certificado SSL por 1 año",
+  "Plantilla a Elección",
+  "Una Sola Página",
+  "4 Secciones a Elección(Ej. Servicios, Nosotros, etc)",
+  "Hasta 20 imagenes",
+  "Hasta 2 videos de Youtube",
   "Botón de Whatsapp",
-  "Hosting Incluido por un Año",
   "Botones de Redes Sociales",
   "Dominio .com.ar Incluido por un Año",
-  "Formulario de Contacto",
-  "Configuración Correo Corporativo",
+  "Hosting Incluido por un Año",
+  "Configuración de Correo Corporativo",
+  "Certificado SSL Incluido",
+  "Google Maps Integrado",
+  "Configuración de Google Mi Negocio",
+  "Formulario de Contacto Personalizado",
+];
+let caracteristicasSitioWebCorporativo = [
+  "Plantilla a Elección",
+  "4 Páginas a Elección(Ej. Servicios, Nosotros, etc)",
+  "4 Secciones en cada Página",
+  "Hasta 40 imagenes",
+  "Hasta 3 videos de Youtube",
+  "Botón de Whatsapp",
+  "Botones de Redes Sociales",
+  "Dominio .com.ar Incluido por un Año",
+  "Hosting Incluido por un Año",
+  "Configuración de Correo Corporativo",
+  "Certificado SSL Incluido",
+  "Google Maps Integrado",
+  "Configuración de Google Mi Negocio",
+  "Formulario de Contacto Personalizado",
+];
+
+let caracteristicasCatalogoOnline = [
+  "Diseño Personalizado",
+  "Autoadministrable",
+  "Página Inicio",
+  "Página Productos",
+  "Página Contacto",
+  "Página a Elección con 4 Secciónes",
+  "Carrito para Presupuestar",
+  "Envio de Cotizaciones por Email",
+  "Gestión de Stock",
+  "Hasta 2000 productos",
+  "Categorias Ilimitadas",
+  "Botones de Redes Sociales",
+  "Botón de Whatsapp",
+  "Inicio de Sesión para Clientes",
+  "Panel Administrador de Productos",
+  "Dominio .com.ar incluido por un Año",
+  "Hosting Incluido por un Año",
+  "Configuración de Correo Corporativo",
+  "Certificado SSL Incluido",
+  "Google Maps Integrado",
+  "Configuración de Google Mi Negocio",
+  "Formulario de Contacto Personalizado",
+  "Acceso a Tuturiales para aprender a Administrar el Catalogo",
 ];
 
 let caracteristicasTiendasVirtuales = [
   "Diseño Personalizado",
-  "Inicio de Sesión para Clientes",
-  "Sección de Productos",
-  "Configuración de Correo Corporativo",
-  "Sección Sobre Nosotros",
-  "Panel Administrador de Productos",
-  "Sección de Contacto",
-  "Métodos de Pago Personalizados",
+  "Página Inicio",
+  "Página Productos",
+  "Página Nosotros",
+  "Página Contacto",
+  "Pedidos y Cobros Online",
+  "Gestión de Stock",
+  "Autoadministrable",
+  "Categorias Ilimitadas",
   "Carrito de Compras",
   "Botones de Redes Sociales",
-  "Envíos por Correo",
-  "Hosting Incluido por un Año",
   "Botón de Whatsapp",
+  "Hasta 2000 productos",
+  "Inicio de Sesión para Clientes",
+  "Panel Administrador de Productos",
+  "Zippin Integrado (Envios por Correo)",
+  "Mercado Pago Integrado",
   "Dominio .com.ar incluido por un Año",
+  "Hosting Incluido por un Año",
+  "Configuración de Correo Corporativo",
+  "Certificado SSL Incluido",
   "Google Maps Integrado",
-  "Certificado SSL por 1 año",
+  "Configuración de Google Mi Negocio",
+  "Formulario de Contacto Personalizado",
+  "Acceso a Tuturiales para aprender a Administrar la Tienda",
+];
+
+
+let caracteristicasSitioWebPersonalizado = [
+  "Diseño Personalizado",
+  "Páginas a Gusto",
+  "Sitio Web Autogestionable",
+  "Inicio de Sesión para Clientes",
+  "Botones de Redes Sociales",
+  "Botón de Whatsapp",
+  "Google Maps Integrado",
+  "Formularios de Contacto Personalizados",
+  "Dominio .com.ar incluido por un Año",
+  "Hosting Incluido por un Año",
+  "Certificado SSL Incluido",
+  "Configuración de Correo Corporativo",
+  "Configuración de Google Mi Negocio",
 ];
 ---
 
@@ -56,7 +128,7 @@ let caracteristicasTiendasVirtuales = [
           <h3
             class="xl:leading-[normal] lg:leading-[normal] md:leading-[normal] leading-[normal] xl:text-7xl lg:text-6xl md:text-5xl text-[2.7rem] font-bold text-celeste/[.1] bg-gradient-to-br from-naranja via-grey-text to-celeste bg-clip-text"
           >
-            Sitios Web Corporativos
+            Landing Page
           </h3>
           <p
             class="xl:text-xl lg:text-xl md:text-lg text-base font-medium text-grey-light"
@@ -67,7 +139,7 @@ let caracteristicasTiendasVirtuales = [
               <p
                 class="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-[2.5rem] font-bold mb-2 leading-none text-grey-light"
               >
-                $25.000
+                $65.000
               </p>
               <p class="mb-2 text-grey-text text-sm sm:text-base font-regular lg:text-grey">
                 *Pago Único.
@@ -127,11 +199,11 @@ let caracteristicasTiendasVirtuales = [
           >
             {
               caracteristicasLandingPrecios.map((item) => (
-                <li class="flex items-center gap-2 leading-none md:text-lg text-base w-max  
+                <li class="flex items-center gap-2 leading-none md:text-lg text-base w-fit 
                 xl:even:-order-none 
                 xl:odd:-order-none 
                 odd:-order-last
-                even:-order-first">
+                even:-order-first self-center">
                   <svg
                     width="16"
                     height="17"
@@ -220,8 +292,8 @@ let caracteristicasTiendasVirtuales = [
               La compra de un Sitio Web Corporativo viene con un Dominio .com.ar
               <br class="hidden xl:visible" />incluido por<br class="sm:hidden visible" /> un año.<br /><strong
                 class="font-medium border-b border-grey/[0.7]"
-                >A partir del segundo año, el precio es de 8 USD por AÑO y se
-                abona en Pesos argentinos</strong
+                >A partir del segundo año, el precio es de 7 USD por AÑO y se
+                puede abonar en Pesos argentinos</strong
               > al tipo de Cambio oficial que presente el Banco Central al momento
               de pagar.
             </p>
@@ -241,7 +313,7 @@ let caracteristicasTiendasVirtuales = [
           <h3
             class="xl:text-7xl lg:text-6xl md:text-5xl text-[2.7rem] font-bold leading-none text-light bg-gradient-to-bl from-light/[1] via-verde/[1] to-light/[1] text-transparent bg-clip-text"
           >
-            Tiendas Virtuales
+            Sitio Web Corporativo
           </h3>
           <p
             class="xl:text-xl lg:text-xl md:text-lg text-base font-medium text-grey-light"
@@ -253,7 +325,255 @@ let caracteristicasTiendasVirtuales = [
               <p
                 class="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-[2.5rem] font-bold mb-2 leading-none text-grey-light"
               >
-                $65.000
+                $50.000
+              </p>
+              <p
+                class="mb-2 text-grey-text text-sm sm:text-base font-regular lg:text-grey"
+              >
+                *Pago Único
+              </p>
+            </div>
+            <p class="text-xs sm:text-sm font-regular lg:text-grey text-grey-text">
+              **Consulte Precio en Cuotas
+            </p>
+            <p class="text-xs sm:text-sm font-regular lg:text-grey text-grey-text">
+              *Precio Reflejado en Pesos Argentinos
+            </p>
+          </div>
+          <div
+            class="flex lg:flex-row md:flex-col sm:flex-row flex-col sm:gap-5 gap-8 lg:items-center relative w-fit"
+          >
+            <a
+              href="/contacto"
+              class="btn bg-violeta text-light hover:bg-dark hover:text-violet-300 hover:ring-2 hover:ring-violeta transition-all [&>svg]:hover:fill-violeta w-fit hover:scale-105 h-auto font-medium hover:font-bold"
+              >Quiero una Página <svg
+                class="fill-light"
+                width="22"
+                height="24"
+                viewBox="0 0 22 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.9014 24L16.2254 23.4366C13.9718 21.2958 12.3944 19.9437 12.3944 18.2535C12.3944 16.9014 13.5211 15.7746 14.8732 15.7746C15.662 15.7746 16.4507 16.1127 16.9014 16.6761C17.3521 16.1127 18.1408 15.7746 18.9296 15.7746C20.2817 15.7746 21.4085 16.7887 21.4085 18.2535C21.4085 19.9437 19.831 21.2958 17.5775 23.4366L16.9014 24ZM15.7746 0C17.0141 0 18.0282 1.01408 18.0282 2.25352V12.4845L16.9014 12.3944L15.7746 12.4845V2.25352H10.1408V11.2676L7.32394 8.73239L4.50704 11.2676V2.25352H2.25352V20.2817H10.231C10.3662 21.093 10.6479 21.8479 11.0423 22.5352H2.25352C1.01408 22.5352 0 21.5211 0 20.2817V2.25352C0 1.01408 1.01408 0 2.25352 0H15.7746Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="/trabajos"
+              class="flex items-center [&>svg]:hover:h-4 gap-2 stroke-grey-text text-grey-text hover:scale-110 transition-all hover:[&>*]:scale-105 lg:text-base text-sm"
+              >Ver Ejemplos <svg
+                class="lg:w-5 h-3 stroke-2"
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.4082 3.5H2.4082C2.14299 3.5 1.88863 3.60536 1.7011 3.79289C1.51356 3.98043 1.4082 4.23478 1.4082 4.5V14.5C1.4082 14.7652 1.51356 15.0196 1.7011 15.2071C1.88863 15.3946 2.14299 15.5 2.4082 15.5H12.4082C12.6734 15.5 12.9278 15.3946 13.1153 15.2071C13.3028 15.0196 13.4082 14.7652 13.4082 14.5V9.5M7.4082 9.5L14.9082 2M10.4082 0.5H16.4082V6.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <span
+          class="md:hidden visible h-[0.01px] border border-dashed w-full border-grey opacity-50"
+        ></span>
+        <div class="w-auto md:self-center">
+          <ul
+            class="grid xl:grid-cols-2 items-start grid-cols-1 xl:gap-x-2 xl:gap-y-8 lg:gap-8 md:gap-8 gap-8"
+          >
+            {
+              caracteristicasSitioWebCorporativo.map((item) => (
+                <li class="flex items-center gap-2 leading-none md:text-lg text-base w-fit 
+                xl:even:-order-none 
+                xl:odd:-order-none 
+                odd:-order-last
+                even:-order-first self-center">
+                  <svg
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="8"
+                      cy="8.5"
+                      r="8"
+                      class="fill-violeta"
+                      fill-opacity="0.8"
+                    />
+                    <path
+                      d="M6.83826 12.5C6.58967 12.5 6.35422 12.384 6.20335 12.184L4.16144 9.486C4.09831 9.40268 4.05222 9.30774 4.02581 9.20659C3.9994 9.10545 3.99318 9.00009 4.00751 8.89654C4.02184 8.79299 4.05644 8.69329 4.10933 8.60312C4.16222 8.51295 4.23236 8.43409 4.31574 8.37104C4.3991 8.30774 4.49413 8.2615 4.59539 8.23499C4.69664 8.20848 4.80214 8.20221 4.90582 8.21654C5.00951 8.23088 5.10934 8.26553 5.19961 8.31852C5.28987 8.37151 5.36879 8.4418 5.43185 8.52534L6.7754 10.2992L10.1534 4.87472C10.2655 4.69561 10.444 4.56826 10.6498 4.52058C10.8556 4.47291 11.0719 4.50881 11.2512 4.62041C11.6244 4.85243 11.7393 5.3439 11.5061 5.71765L7.5149 12.124C7.44677 12.2338 7.35285 12.3254 7.24131 12.3907C7.12978 12.456 7.00398 12.4932 6.87484 12.4989C6.86227 12.5 6.85084 12.5 6.83826 12.5Z"
+                      class="fill-light stroke-2"
+                    />
+                  </svg>
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <span
+        class="h-[0.01px] border border-dashed w-full border-grey opacity-50"
+      ></span>
+      <div class="w-full flex flex-col sm:gap-12 gap-8">
+        <h4 class="md:text-3xl text-2xl font-bold">
+          Costos Extras de la <br class="sm:hidden visible">Tienda Virtual
+        </h4>
+        <div
+          class="w-full grid lg:grid-cols-2 grid-cols-1 md:gap-10 gap-6 [&>div>h5]:lg:text-2xl [&>div>h5]:text-xl [&>div>h5]:text-grey-light [&>div>h5]:font-medium [&>div>p]:lg:text-lg [&>div>p]:text-base [&>div>p]:font-regular [&>div>p]:text-grey-text"
+        >
+          <div class="">
+            <svg
+              class="[&>path]:stroke-violet-400 h-20 w-auto mb-4"
+              width="22"
+              height="21"
+              viewBox="0 0 22 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 20H5C3.114 20 2.172 20 1.586 19.414C1 18.828 1 17.886 1 16C1 14.114 1 13.172 1.586 12.586C2.172 12 3.114 12 5 12H17C18.886 12 19.828 12 20.414 12.586C21 13.172 21 14.114 21 16C21 17.886 21 18.828 20.414 19.414C19.828 20 18.886 20 17 20H16M10 1H17C18.886 1 19.828 1 20.414 1.586C21 2.172 21 3.114 21 5C21 6.886 21 7.828 20.414 8.414C19.828 9 18.886 9 17 9H5C3.114 9 2.172 9 1.586 8.414C1 7.828 1 6.886 1 5C1 3.114 1 2.172 1.586 1.586C2.172 1 3.114 1 5 1H6M10 5H17M5 5H7M10 16H17M5 16H7"
+                stroke-linecap="round"></path>
+            </svg>
+
+            <h5>Hosting</h5>
+            <p class="max-w-prose">
+              La compra de una tienda virtual viene con un año gratuito de
+              Hosting.<br /><strong
+                class="font-medium border-b border-grey/[0.7]"
+              >
+                A partir del segundo año, el precio es de 30 USD por AÑO, pero se
+                puede abonar en Pesos argentinos</strong
+              > al tipo de Cambio oficial que presente el Banco Central al momento
+              de pagar.
+            </p>
+          </div>
+          <div>
+            <svg
+              width="22"
+              height="18"
+              viewBox="0 0 22 18"
+              xmlns="http://www.w3.org/2000/svg"
+              class="[&>path]:fill-celeste/[0.8] h-20 w-auto mb-4"
+            >
+              <path
+                d="M11 0.0664062C6.58765 0.0664062 3 3.65417 3 8.06641C3 8.74239 3.08545 9.41395 3.25391 10.0664H0.5V17.9336H21.5V10.0664H18.7461C18.9143 9.41401 19 8.74196 19 8.06641C19 3.65417 15.4123 0.0664062 11 0.0664062ZM11 1.06641C11.2895 1.06641 11.5865 1.19599 11.9082 1.51172C12.2299 1.82744 12.552 2.32479 12.8262 2.96094C13.1705 3.76 13.4255 4.79028 13.5781 5.93359H8.42188C8.57455 4.79028 8.82947 3.76 9.17383 2.96094C9.44798 2.32479 9.77011 1.82744 10.0918 1.51172C10.4135 1.19599 10.7105 1.06641 11 1.06641ZM8.91016 1.38281C8.66688 1.72746 8.44752 2.11971 8.25586 2.56445C7.85157 3.50257 7.56998 4.6618 7.41211 5.93359H4.33203C5.02273 3.76605 6.73638 2.05969 8.91016 1.38281ZM13.0898 1.38281C15.2636 2.05969 16.9773 3.76605 17.668 5.93359H14.5879C14.43 4.6618 14.1484 3.50257 13.7441 2.56445C13.5525 2.11971 13.3331 1.72746 13.0898 1.38281ZM4.09961 6.93359H7.31641C7.29274 7.30653 7.26758 7.67854 7.26758 8.06641C7.26758 8.78156 7.322 9.41367 7.40625 10.0664H4.29882C4.10531 9.41758 4 8.74461 4 8.06641C4 7.67963 4.03955 7.30316 4.09961 6.93359ZM8.31641 6.93359H13.6836C13.709 7.30483 13.7324 7.67832 13.7324 8.06641C13.7324 8.7873 13.6787 9.40291 13.5879 10.0664H8.41211C8.32129 9.40292 8.26758 8.78725 8.26758 8.06641C8.26758 7.67832 8.29099 7.30483 8.31641 6.93359ZM14.6836 6.93359H17.9004C17.9605 7.30316 18 7.67963 18 8.06641C18 8.74482 17.8948 9.41755 17.7012 10.0664H14.5938C14.6779 9.41362 14.7324 8.78117 14.7324 8.06641C14.7324 7.67854 14.7073 7.30653 14.6836 6.93359ZM1.5 11.0664H20.5V16.9336H1.5V11.0664Z"
+                fill="black"></path>
+              <path
+                d="M9.4296 12.1649C9.12143 12.305 8.81326 12.4451 8.5051 12.5851C9.05503 13.6818 9.60404 14.7789 10.1536 15.8758C10.4475 15.4335 10.7415 14.9912 11.0355 14.549C11.3685 14.9839 11.7015 15.4188 12.0345 15.8537C12.5207 14.7546 13.0067 13.6554 13.4931 12.5563C13.179 12.4292 12.865 12.3022 12.5509 12.1751C12.2971 12.7445 12.0457 13.3148 11.7932 13.8848C11.5205 13.5289 11.2478 13.1731 10.9752 12.8173C10.7433 13.1658 10.5114 13.5143 10.2796 13.8627C9.9962 13.2968 9.71212 12.7312 9.4296 12.1649Z"
+                fill="black"></path>
+              <path
+                d="M3.91566 12.1649C3.60749 12.305 3.29933 12.4451 2.99116 12.5851C3.54109 13.6818 4.0901 14.7789 4.63964 15.8758C4.93361 15.4335 5.22758 14.9912 5.52155 14.549C5.85456 14.9839 6.18757 15.4188 6.52058 15.8537C7.0068 14.7546 7.49279 13.6554 7.97919 12.5563C7.66511 12.4292 7.35103 12.3022 7.03695 12.1751C6.78316 12.7445 6.53174 13.3148 6.27925 13.8848C6.00657 13.5289 5.73389 13.1731 5.46122 12.8173C5.22935 13.1658 4.99749 13.5143 4.76563 13.8627C4.48226 13.2968 4.19818 12.7312 3.91566 12.1649Z"
+                fill="black"></path>
+              <path
+                d="M14.9422 12.1649C14.6346 12.305 14.3271 12.4451 14.0195 12.5851C14.5694 13.6818 15.1184 14.7789 15.668 15.8758C15.9619 15.4341 16.2559 14.9924 16.5499 14.5507C16.8823 14.985 17.2147 15.4194 17.5471 15.8537C18.0342 14.7547 18.5178 13.6543 19.0075 12.5563C18.6928 12.4292 18.3782 12.3022 18.0635 12.1751C17.8121 12.7458 17.5596 13.316 17.3076 13.8865C17.0349 13.5301 16.7622 13.1737 16.4895 12.8173C16.2577 13.1658 16.0258 13.5143 15.7939 13.8627C15.5101 13.2968 15.2273 12.7303 14.9422 12.1649Z"
+                fill="black"></path>
+            </svg>
+            <h5>Dominio</h5>
+            <p class="max-w-prose">
+              La compra de una tienda virtual viene con un Dominio .com.ar
+              <br />incluido por un año.<br /><strong
+                class="font-medium border-b border-grey/[0.7]"
+                >A partir del segundo año, el precio es de 10 USD por AÑO y se
+                puede abonar en Pesos argentinos</strong
+              > al tipo de Cambio oficial que presente el Banco Central al momento
+              de pagar.
+            </p>
+          </div>
+        </div>
+      </div>
+      <span
+        class="h-[0.01px] border border-dashed w-full border-grey opacity-50"
+      ></span>
+      <div class="w-full flex flex-col gap-6">
+        <h4 class="md:text-3xl text-2xl font-bold">
+          Paneles de Adminitración
+        </h4>
+        <div
+          class="w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-10 gap-6 [&>div>h5]:lg:text-2xl [&>div>h5]:text-xl [&>div>h5]:font-medium [&>div>h5]:sm:text-grey-light [&>div>p]:lg:text-lg [&>div>p]:text-base [&>div>p]:font-regular [&>div>p]:text-grey-text [&>div>svg]:h-20 [&>div>svg]:w-auto [&>div>svg]:mb-4 [&>div>svg>path]:stroke-verde [&>div>svg>path]:stroke-[0.4px]"
+        >
+          <div>
+            <svg
+              width="18"
+              height="21"
+              viewBox="0 0 18 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 13V15C6.4087 15 4.88258 15.6321 3.75736 16.7574C2.63214 17.8826 2 19.4087 2 21H0C0 18.8783 0.842855 16.8434 2.34315 15.3431C3.84344 13.8429 5.87827 13 8 13ZM8 12C4.685 12 2 9.315 2 6C2 2.685 4.685 0 8 0C11.315 0 14 2.685 14 6C14 9.315 11.315 12 8 12ZM8 10C10.21 10 12 8.21 12 6C12 3.79 10.21 2 8 2C5.79 2 4 3.79 4 6C4 8.21 5.79 10 8 10ZM17 16H18V21H10V16H11V15C11 14.2044 11.3161 13.4413 11.8787 12.8787C12.4413 12.3161 13.2044 12 14 12C14.7956 12 15.5587 12.3161 16.1213 12.8787C16.6839 13.4413 17 14.2044 17 15V16ZM15 16V15C15 14.7348 14.8946 14.4804 14.7071 14.2929C14.5196 14.1054 14.2652 14 14 14C13.7348 14 13.4804 14.1054 13.2929 14.2929C13.1054 14.4804 13 14.7348 13 15V16H15Z"
+              ></path>
+            </svg>
+            <h5>Administrador / Editor</h5>
+            <p>
+              Accede a un panel para Ver, Agregar, Modificar y Borrar: Productos, Páginas, Imágenes, Comentarios, Pedidos, Estadísticas, e Informes.
+            </p>
+          </div>
+          <div>
+            <svg
+              width="16"
+              height="21"
+              viewBox="0 0 16 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 21C0 18.8783 0.842855 16.8434 2.34315 15.3431C3.84344 13.8429 5.87827 13 8 13C10.1217 13 12.1566 13.8429 13.6569 15.3431C15.1571 16.8434 16 18.8783 16 21H14C14 19.4087 13.3679 17.8826 12.2426 16.7574C11.1174 15.6321 9.5913 15 8 15C6.4087 15 4.88258 15.6321 3.75736 16.7574C2.63214 17.8826 2 19.4087 2 21H0ZM8 12C4.685 12 2 9.315 2 6C2 2.685 4.685 0 8 0C11.315 0 14 2.685 14 6C14 9.315 11.315 12 8 12ZM8 10C10.21 10 12 8.21 12 6C12 3.79 10.21 2 8 2C5.79 2 4 3.79 4 6C4 8.21 5.79 10 8 10Z"
+              ></path>
+            </svg>
+
+            <h5>Clientes</h5>
+            <p>
+              Desde su panel de control, un cliente puede ver sus pedidos
+              recientes, gestionar sus direcciones de envío y facturación, y editar
+              su contraseña y los detalles de su cuenta.
+            </p>
+          </div>
+        </div>
+      </div>  
+      <!-- <div class="w-full flex flex-col gap-6 [&>h4]:lg:text-2xl [&>h4]:md:text-xl [&>h4]:text-lg [&>h4]:text-celeste [&>h4]:font-medium [&>h4]:sm:text-grey-light [&>p]:lg:text-lg [&>p]:text-base [&>p]:font-regular [&>p]:sm:text-grey-text [&>p]:text-grey-light">
+        <h4 class="md:text-3xl text-2xl font-bold">Integraciónes Personalizadas</h4>
+        <p class="max-w-prose">
+          Agrega los metodos de pago y envios que desees a tu Tienda, consulta
+          el precio de cada integración, ya que algunas empresas cobran por
+          agregar su sistema a las tiendas.
+        </p>
+        <div>
+          <h5></h5>
+        </div>
+      </div> -->
+    </article>
+    <article
+      class="bg-gradient-to-bl from-dark-light/[0.1] via-dark-light/[0.6] to-dark/[0.6] rounded-3xl lg:py-12 lg:px-10 sm:py-10 sm:px-6 px-4 py-8 flex flex-col xl:gap-16 md:gap-14 gap-12"
+    >
+      <div
+        class="flex md:flex-row flex-col justify-between xl:gap-10 md:gap-8 gap-10"
+      >
+        <div
+          class="2xl:w-6/12 xl:w-[45%] md:w-6/12 flex flex-col lg:gap-10 sm:gap-8 gap-7"
+        >
+          <h3
+            class="xl:text-7xl lg:text-6xl md:text-5xl text-[2.7rem] font-bold leading-none text-light bg-gradient-to-bl from-light/[1] via-verde/[1] to-light/[1] text-transparent bg-clip-text"
+          >
+            Catalogo Online
+          </h3>
+          <p
+            class="xl:text-xl lg:text-xl md:text-lg text-base font-medium text-grey-light"
+          >
+          Nuestras Tiendas Virtuales son fáciles de usar y tienen diseños personalizados para potenciar tus ventas. Con disponibilidad las 24/7, te destacarás de la competencia y brindarás una experiencia de compra excepcional a tus clientes.
+          </p>
+          <div class="">
+            <div class="flex items-end gap-1">
+              <p
+                class="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-[2.5rem] font-bold mb-2 leading-none text-grey-light"
+              >
+                $120.000
               </p>
               <p
                 class="mb-2 text-grey-text text-sm sm:text-base font-regular lg:text-grey"
@@ -314,12 +634,12 @@ let caracteristicasTiendasVirtuales = [
             class="grid xl:grid-cols-2 items-start grid-cols-1 xl:gap-x-2 xl:gap-y-8 lg:gap-8 md:gap-8 gap-8"
           >
             {
-              caracteristicasTiendasVirtuales.map((item) => (
-                <li class="flex items-center gap-2 leading-none md:text-lg text-base w-max 
+              caracteristicasCatalogoOnline.map((item) => (
+                <li class="flex items-center gap-2 leading-none md:text-lg text-base w-fit 
                 xl:even:-order-none 
                 xl:odd:-order-none 
                 odd:-order-last
-                even:-order-first">
+                even:-order-first self-center">
                   <svg
                     width="16"
                     height="17"
@@ -376,8 +696,8 @@ let caracteristicasTiendasVirtuales = [
               Hosting.<br /><strong
                 class="font-medium border-b border-grey/[0.7]"
               >
-                A partir del segundo año, el precio es de 32 USD por AÑO, pero se
-                abona en Pesos argentinos</strong
+                A partir del segundo año, el precio es de 30 USD por AÑO, pero se
+                puede abonar en Pesos argentinos</strong
               > al tipo de Cambio oficial que presente el Banco Central al momento
               de pagar.
             </p>
@@ -408,8 +728,495 @@ let caracteristicasTiendasVirtuales = [
               La compra de una tienda virtual viene con un Dominio .com.ar
               <br />incluido por un año.<br /><strong
                 class="font-medium border-b border-grey/[0.7]"
-                >A partir del segundo año, el precio es de 8 USD por AÑO y se
-                abona en Pesos argentinos</strong
+                >A partir del segundo año, el precio es de 10 USD por AÑO y se
+                puede abonar en Pesos argentinos</strong
+              > al tipo de Cambio oficial que presente el Banco Central al momento
+              de pagar.
+            </p>
+          </div>
+        </div>
+      </div>
+      <span
+        class="h-[0.01px] border border-dashed w-full border-grey opacity-50"
+      ></span>
+      <div class="w-full flex flex-col gap-6">
+        <h4 class="md:text-3xl text-2xl font-bold">
+          Paneles de Adminitración
+        </h4>
+        <div
+          class="w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-10 gap-6 [&>div>h5]:lg:text-2xl [&>div>h5]:text-xl [&>div>h5]:font-medium [&>div>h5]:sm:text-grey-light [&>div>p]:lg:text-lg [&>div>p]:text-base [&>div>p]:font-regular [&>div>p]:text-grey-text [&>div>svg]:h-20 [&>div>svg]:w-auto [&>div>svg]:mb-4 [&>div>svg>path]:stroke-verde [&>div>svg>path]:stroke-[0.4px]"
+        >
+          <div>
+            <svg
+              width="18"
+              height="21"
+              viewBox="0 0 18 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 13V15C6.4087 15 4.88258 15.6321 3.75736 16.7574C2.63214 17.8826 2 19.4087 2 21H0C0 18.8783 0.842855 16.8434 2.34315 15.3431C3.84344 13.8429 5.87827 13 8 13ZM8 12C4.685 12 2 9.315 2 6C2 2.685 4.685 0 8 0C11.315 0 14 2.685 14 6C14 9.315 11.315 12 8 12ZM8 10C10.21 10 12 8.21 12 6C12 3.79 10.21 2 8 2C5.79 2 4 3.79 4 6C4 8.21 5.79 10 8 10ZM17 16H18V21H10V16H11V15C11 14.2044 11.3161 13.4413 11.8787 12.8787C12.4413 12.3161 13.2044 12 14 12C14.7956 12 15.5587 12.3161 16.1213 12.8787C16.6839 13.4413 17 14.2044 17 15V16ZM15 16V15C15 14.7348 14.8946 14.4804 14.7071 14.2929C14.5196 14.1054 14.2652 14 14 14C13.7348 14 13.4804 14.1054 13.2929 14.2929C13.1054 14.4804 13 14.7348 13 15V16H15Z"
+              ></path>
+            </svg>
+            <h5>Administrador / Editor</h5>
+            <p>
+              Accede a un panel para Ver, Agregar, Modificar y Borrar: Productos, Páginas, Imágenes, Comentarios, Pedidos, Estadísticas, e Informes.
+            </p>
+          </div>
+          <div>
+            <svg
+              width="16"
+              height="21"
+              viewBox="0 0 16 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 21C0 18.8783 0.842855 16.8434 2.34315 15.3431C3.84344 13.8429 5.87827 13 8 13C10.1217 13 12.1566 13.8429 13.6569 15.3431C15.1571 16.8434 16 18.8783 16 21H14C14 19.4087 13.3679 17.8826 12.2426 16.7574C11.1174 15.6321 9.5913 15 8 15C6.4087 15 4.88258 15.6321 3.75736 16.7574C2.63214 17.8826 2 19.4087 2 21H0ZM8 12C4.685 12 2 9.315 2 6C2 2.685 4.685 0 8 0C11.315 0 14 2.685 14 6C14 9.315 11.315 12 8 12ZM8 10C10.21 10 12 8.21 12 6C12 3.79 10.21 2 8 2C5.79 2 4 3.79 4 6C4 8.21 5.79 10 8 10Z"
+              ></path>
+            </svg>
+
+            <h5>Clientes</h5>
+            <p>
+              Desde su panel de control, un cliente puede ver sus pedidos
+              recientes, gestionar sus direcciones de envío y facturación, y editar
+              su contraseña y los detalles de su cuenta.
+            </p>
+          </div>
+        </div>
+      </div>  
+      <!-- <div class="w-full flex flex-col gap-6 [&>h4]:lg:text-2xl [&>h4]:md:text-xl [&>h4]:text-lg [&>h4]:text-celeste [&>h4]:font-medium [&>h4]:sm:text-grey-light [&>p]:lg:text-lg [&>p]:text-base [&>p]:font-regular [&>p]:sm:text-grey-text [&>p]:text-grey-light">
+        <h4 class="md:text-3xl text-2xl font-bold">Integraciónes Personalizadas</h4>
+        <p class="max-w-prose">
+          Agrega los metodos de pago y envios que desees a tu Tienda, consulta
+          el precio de cada integración, ya que algunas empresas cobran por
+          agregar su sistema a las tiendas.
+        </p>
+        <div>
+          <h5></h5>
+        </div>
+      </div> -->
+    </article>
+    <article
+      class="bg-gradient-to-bl from-dark-light/[0.1] via-dark-light/[0.6] to-dark/[0.6] rounded-3xl lg:py-12 lg:px-10 sm:py-10 sm:px-6 px-4 py-8 flex flex-col xl:gap-16 md:gap-14 gap-12"
+    >
+      <div
+        class="flex md:flex-row flex-col justify-between xl:gap-10 md:gap-8 gap-10"
+      >
+        <div
+          class="2xl:w-6/12 xl:w-[45%] md:w-6/12 flex flex-col lg:gap-10 sm:gap-8 gap-7"
+        >
+          <h3
+            class="xl:text-7xl lg:text-6xl md:text-5xl text-[2.7rem] font-bold leading-none text-light bg-gradient-to-bl from-light/[1] via-verde/[1] to-light/[1] text-transparent bg-clip-text"
+          >
+            Tiendas Virtuales
+          </h3>
+          <p
+            class="xl:text-xl lg:text-xl md:text-lg text-base font-medium text-grey-light"
+          >
+          Nuestras Tiendas Virtuales son fáciles de usar y tienen diseños personalizados para potenciar tus ventas. Con disponibilidad las 24/7, te destacarás de la competencia y brindarás una experiencia de compra excepcional a tus clientes.
+          </p>
+          <div class="">
+            <div class="flex items-end gap-1">
+              <p
+                class="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-[2.5rem] font-bold mb-2 leading-none text-grey-light"
+              >
+                $85.000
+              </p>
+              <p
+                class="mb-2 text-grey-text text-sm sm:text-base font-regular lg:text-grey"
+              >
+                *Paso
+              </p>
+            </div>
+            <p class="text-xs sm:text-sm font-regular lg:text-grey text-grey-text">
+              *Consulte Precio en Cuotas
+            </p>
+            <p class="text-xs sm:text-sm font-regular lg:text-grey text-grey-text">
+              *Precio Reflejado en Pesos Argentinos
+            </p>
+            <p class="text-xs sm:text-sm font-regular lg:text-grey text-grey-text">
+              *Solo abona cuando la tienda este completamente terminada y lista para usar.
+            </p>
+          </div>
+          <div
+            class="flex lg:flex-row md:flex-col sm:flex-row flex-col sm:gap-5 gap-8 lg:items-center relative w-fit"
+          >
+            <a
+              href="/contacto"
+              class="btn bg-violeta text-light hover:bg-dark hover:text-violet-300 hover:ring-2 hover:ring-violeta transition-all [&>svg]:hover:fill-violeta w-fit hover:scale-105 h-auto font-medium hover:font-bold"
+              >Quiero una Página <svg
+                class="fill-light"
+                width="22"
+                height="24"
+                viewBox="0 0 22 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.9014 24L16.2254 23.4366C13.9718 21.2958 12.3944 19.9437 12.3944 18.2535C12.3944 16.9014 13.5211 15.7746 14.8732 15.7746C15.662 15.7746 16.4507 16.1127 16.9014 16.6761C17.3521 16.1127 18.1408 15.7746 18.9296 15.7746C20.2817 15.7746 21.4085 16.7887 21.4085 18.2535C21.4085 19.9437 19.831 21.2958 17.5775 23.4366L16.9014 24ZM15.7746 0C17.0141 0 18.0282 1.01408 18.0282 2.25352V12.4845L16.9014 12.3944L15.7746 12.4845V2.25352H10.1408V11.2676L7.32394 8.73239L4.50704 11.2676V2.25352H2.25352V20.2817H10.231C10.3662 21.093 10.6479 21.8479 11.0423 22.5352H2.25352C1.01408 22.5352 0 21.5211 0 20.2817V2.25352C0 1.01408 1.01408 0 2.25352 0H15.7746Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="/trabajos"
+              class="flex items-center [&>svg]:hover:h-4 gap-2 stroke-grey-text text-grey-text hover:scale-110 transition-all hover:[&>*]:scale-105 lg:text-base text-sm"
+              >Ver Ejemplos <svg
+                class="lg:w-5 h-3 stroke-2"
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.4082 3.5H2.4082C2.14299 3.5 1.88863 3.60536 1.7011 3.79289C1.51356 3.98043 1.4082 4.23478 1.4082 4.5V14.5C1.4082 14.7652 1.51356 15.0196 1.7011 15.2071C1.88863 15.3946 2.14299 15.5 2.4082 15.5H12.4082C12.6734 15.5 12.9278 15.3946 13.1153 15.2071C13.3028 15.0196 13.4082 14.7652 13.4082 14.5V9.5M7.4082 9.5L14.9082 2M10.4082 0.5H16.4082V6.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <span
+          class="md:hidden visible h-[0.01px] border border-dashed w-full border-grey opacity-50"
+        ></span>
+        <div class="w-auto md:self-center">
+          <ul
+            class="grid xl:grid-cols-2 items-start grid-cols-1 xl:gap-x-2 xl:gap-y-8 lg:gap-8 md:gap-8 gap-8"
+          >
+            {
+              caracteristicasTiendasVirtuales.map((item) => (
+                <li class="flex items-center gap-2 leading-none md:text-lg text-base w-fit 
+                xl:even:-order-none 
+                xl:odd:-order-none 
+                odd:-order-last
+                even:-order-first self-center">
+                  <svg
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="8"
+                      cy="8.5"
+                      r="8"
+                      class="fill-violeta"
+                      fill-opacity="0.8"
+                    />
+                    <path
+                      d="M6.83826 12.5C6.58967 12.5 6.35422 12.384 6.20335 12.184L4.16144 9.486C4.09831 9.40268 4.05222 9.30774 4.02581 9.20659C3.9994 9.10545 3.99318 9.00009 4.00751 8.89654C4.02184 8.79299 4.05644 8.69329 4.10933 8.60312C4.16222 8.51295 4.23236 8.43409 4.31574 8.37104C4.3991 8.30774 4.49413 8.2615 4.59539 8.23499C4.69664 8.20848 4.80214 8.20221 4.90582 8.21654C5.00951 8.23088 5.10934 8.26553 5.19961 8.31852C5.28987 8.37151 5.36879 8.4418 5.43185 8.52534L6.7754 10.2992L10.1534 4.87472C10.2655 4.69561 10.444 4.56826 10.6498 4.52058C10.8556 4.47291 11.0719 4.50881 11.2512 4.62041C11.6244 4.85243 11.7393 5.3439 11.5061 5.71765L7.5149 12.124C7.44677 12.2338 7.35285 12.3254 7.24131 12.3907C7.12978 12.456 7.00398 12.4932 6.87484 12.4989C6.86227 12.5 6.85084 12.5 6.83826 12.5Z"
+                      class="fill-light stroke-2"
+                    />
+                  </svg>
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <span
+        class="h-[0.01px] border border-dashed w-full border-grey opacity-50"
+      ></span>
+      <div class="w-full flex flex-col sm:gap-12 gap-8">
+        <h4 class="md:text-3xl text-2xl font-bold">
+          Costos Extras de la <br class="sm:hidden visible">Tienda Virtual
+        </h4>
+        <div
+          class="w-full grid lg:grid-cols-2 grid-cols-1 md:gap-10 gap-6 [&>div>h5]:lg:text-2xl [&>div>h5]:text-xl [&>div>h5]:text-grey-light [&>div>h5]:font-medium [&>div>p]:lg:text-lg [&>div>p]:text-base [&>div>p]:font-regular [&>div>p]:text-grey-text"
+        >
+          <div class="">
+            <svg
+              class="[&>path]:stroke-violet-400 h-20 w-auto mb-4"
+              width="22"
+              height="21"
+              viewBox="0 0 22 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 20H5C3.114 20 2.172 20 1.586 19.414C1 18.828 1 17.886 1 16C1 14.114 1 13.172 1.586 12.586C2.172 12 3.114 12 5 12H17C18.886 12 19.828 12 20.414 12.586C21 13.172 21 14.114 21 16C21 17.886 21 18.828 20.414 19.414C19.828 20 18.886 20 17 20H16M10 1H17C18.886 1 19.828 1 20.414 1.586C21 2.172 21 3.114 21 5C21 6.886 21 7.828 20.414 8.414C19.828 9 18.886 9 17 9H5C3.114 9 2.172 9 1.586 8.414C1 7.828 1 6.886 1 5C1 3.114 1 2.172 1.586 1.586C2.172 1 3.114 1 5 1H6M10 5H17M5 5H7M10 16H17M5 16H7"
+                stroke-linecap="round"></path>
+            </svg>
+
+            <h5>Hosting</h5>
+            <p class="max-w-prose">
+              La compra de una tienda virtual viene con un año gratuito de
+              Hosting.<br /><strong
+                class="font-medium border-b border-grey/[0.7]"
+              >
+                A partir del segundo año, el precio es de 30 USD por AÑO, pero se
+                puede abonar en Pesos argentinos</strong
+              > al tipo de Cambio oficial que presente el Banco Central al momento
+              de pagar.
+            </p>
+          </div>
+          <div>
+            <svg
+              width="22"
+              height="18"
+              viewBox="0 0 22 18"
+              xmlns="http://www.w3.org/2000/svg"
+              class="[&>path]:fill-celeste/[0.8] h-20 w-auto mb-4"
+            >
+              <path
+                d="M11 0.0664062C6.58765 0.0664062 3 3.65417 3 8.06641C3 8.74239 3.08545 9.41395 3.25391 10.0664H0.5V17.9336H21.5V10.0664H18.7461C18.9143 9.41401 19 8.74196 19 8.06641C19 3.65417 15.4123 0.0664062 11 0.0664062ZM11 1.06641C11.2895 1.06641 11.5865 1.19599 11.9082 1.51172C12.2299 1.82744 12.552 2.32479 12.8262 2.96094C13.1705 3.76 13.4255 4.79028 13.5781 5.93359H8.42188C8.57455 4.79028 8.82947 3.76 9.17383 2.96094C9.44798 2.32479 9.77011 1.82744 10.0918 1.51172C10.4135 1.19599 10.7105 1.06641 11 1.06641ZM8.91016 1.38281C8.66688 1.72746 8.44752 2.11971 8.25586 2.56445C7.85157 3.50257 7.56998 4.6618 7.41211 5.93359H4.33203C5.02273 3.76605 6.73638 2.05969 8.91016 1.38281ZM13.0898 1.38281C15.2636 2.05969 16.9773 3.76605 17.668 5.93359H14.5879C14.43 4.6618 14.1484 3.50257 13.7441 2.56445C13.5525 2.11971 13.3331 1.72746 13.0898 1.38281ZM4.09961 6.93359H7.31641C7.29274 7.30653 7.26758 7.67854 7.26758 8.06641C7.26758 8.78156 7.322 9.41367 7.40625 10.0664H4.29882C4.10531 9.41758 4 8.74461 4 8.06641C4 7.67963 4.03955 7.30316 4.09961 6.93359ZM8.31641 6.93359H13.6836C13.709 7.30483 13.7324 7.67832 13.7324 8.06641C13.7324 8.7873 13.6787 9.40291 13.5879 10.0664H8.41211C8.32129 9.40292 8.26758 8.78725 8.26758 8.06641C8.26758 7.67832 8.29099 7.30483 8.31641 6.93359ZM14.6836 6.93359H17.9004C17.9605 7.30316 18 7.67963 18 8.06641C18 8.74482 17.8948 9.41755 17.7012 10.0664H14.5938C14.6779 9.41362 14.7324 8.78117 14.7324 8.06641C14.7324 7.67854 14.7073 7.30653 14.6836 6.93359ZM1.5 11.0664H20.5V16.9336H1.5V11.0664Z"
+                fill="black"></path>
+              <path
+                d="M9.4296 12.1649C9.12143 12.305 8.81326 12.4451 8.5051 12.5851C9.05503 13.6818 9.60404 14.7789 10.1536 15.8758C10.4475 15.4335 10.7415 14.9912 11.0355 14.549C11.3685 14.9839 11.7015 15.4188 12.0345 15.8537C12.5207 14.7546 13.0067 13.6554 13.4931 12.5563C13.179 12.4292 12.865 12.3022 12.5509 12.1751C12.2971 12.7445 12.0457 13.3148 11.7932 13.8848C11.5205 13.5289 11.2478 13.1731 10.9752 12.8173C10.7433 13.1658 10.5114 13.5143 10.2796 13.8627C9.9962 13.2968 9.71212 12.7312 9.4296 12.1649Z"
+                fill="black"></path>
+              <path
+                d="M3.91566 12.1649C3.60749 12.305 3.29933 12.4451 2.99116 12.5851C3.54109 13.6818 4.0901 14.7789 4.63964 15.8758C4.93361 15.4335 5.22758 14.9912 5.52155 14.549C5.85456 14.9839 6.18757 15.4188 6.52058 15.8537C7.0068 14.7546 7.49279 13.6554 7.97919 12.5563C7.66511 12.4292 7.35103 12.3022 7.03695 12.1751C6.78316 12.7445 6.53174 13.3148 6.27925 13.8848C6.00657 13.5289 5.73389 13.1731 5.46122 12.8173C5.22935 13.1658 4.99749 13.5143 4.76563 13.8627C4.48226 13.2968 4.19818 12.7312 3.91566 12.1649Z"
+                fill="black"></path>
+              <path
+                d="M14.9422 12.1649C14.6346 12.305 14.3271 12.4451 14.0195 12.5851C14.5694 13.6818 15.1184 14.7789 15.668 15.8758C15.9619 15.4341 16.2559 14.9924 16.5499 14.5507C16.8823 14.985 17.2147 15.4194 17.5471 15.8537C18.0342 14.7547 18.5178 13.6543 19.0075 12.5563C18.6928 12.4292 18.3782 12.3022 18.0635 12.1751C17.8121 12.7458 17.5596 13.316 17.3076 13.8865C17.0349 13.5301 16.7622 13.1737 16.4895 12.8173C16.2577 13.1658 16.0258 13.5143 15.7939 13.8627C15.5101 13.2968 15.2273 12.7303 14.9422 12.1649Z"
+                fill="black"></path>
+            </svg>
+            <h5>Dominio</h5>
+            <p class="max-w-prose">
+              La compra de una tienda virtual viene con un Dominio .com.ar
+              <br />incluido por un año.<br /><strong
+                class="font-medium border-b border-grey/[0.7]"
+                >A partir del segundo año, el precio es de 10 USD por AÑO y se
+                puede abonar en Pesos argentinos</strong
+              > al tipo de Cambio oficial que presente el Banco Central al momento
+              de pagar.
+            </p>
+          </div>
+        </div>
+      </div>
+      <span
+        class="h-[0.01px] border border-dashed w-full border-grey opacity-50"
+      ></span>
+      <div class="w-full flex flex-col gap-6">
+        <h4 class="md:text-3xl text-2xl font-bold">
+          Paneles de Adminitración
+        </h4>
+        <div
+          class="w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-10 gap-6 [&>div>h5]:lg:text-2xl [&>div>h5]:text-xl [&>div>h5]:font-medium [&>div>h5]:sm:text-grey-light [&>div>p]:lg:text-lg [&>div>p]:text-base [&>div>p]:font-regular [&>div>p]:text-grey-text [&>div>svg]:h-20 [&>div>svg]:w-auto [&>div>svg]:mb-4 [&>div>svg>path]:stroke-verde [&>div>svg>path]:stroke-[0.4px]"
+        >
+          <div>
+            <svg
+              width="18"
+              height="21"
+              viewBox="0 0 18 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 13V15C6.4087 15 4.88258 15.6321 3.75736 16.7574C2.63214 17.8826 2 19.4087 2 21H0C0 18.8783 0.842855 16.8434 2.34315 15.3431C3.84344 13.8429 5.87827 13 8 13ZM8 12C4.685 12 2 9.315 2 6C2 2.685 4.685 0 8 0C11.315 0 14 2.685 14 6C14 9.315 11.315 12 8 12ZM8 10C10.21 10 12 8.21 12 6C12 3.79 10.21 2 8 2C5.79 2 4 3.79 4 6C4 8.21 5.79 10 8 10ZM17 16H18V21H10V16H11V15C11 14.2044 11.3161 13.4413 11.8787 12.8787C12.4413 12.3161 13.2044 12 14 12C14.7956 12 15.5587 12.3161 16.1213 12.8787C16.6839 13.4413 17 14.2044 17 15V16ZM15 16V15C15 14.7348 14.8946 14.4804 14.7071 14.2929C14.5196 14.1054 14.2652 14 14 14C13.7348 14 13.4804 14.1054 13.2929 14.2929C13.1054 14.4804 13 14.7348 13 15V16H15Z"
+              ></path>
+            </svg>
+            <h5>Administrador / Editor</h5>
+            <p>
+              Accede a un panel para Ver, Agregar, Modificar y Borrar: Productos, Páginas, Imágenes, Comentarios, Pedidos, Estadísticas, e Informes.
+            </p>
+          </div>
+          <div>
+            <svg
+              width="16"
+              height="21"
+              viewBox="0 0 16 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 21C0 18.8783 0.842855 16.8434 2.34315 15.3431C3.84344 13.8429 5.87827 13 8 13C10.1217 13 12.1566 13.8429 13.6569 15.3431C15.1571 16.8434 16 18.8783 16 21H14C14 19.4087 13.3679 17.8826 12.2426 16.7574C11.1174 15.6321 9.5913 15 8 15C6.4087 15 4.88258 15.6321 3.75736 16.7574C2.63214 17.8826 2 19.4087 2 21H0ZM8 12C4.685 12 2 9.315 2 6C2 2.685 4.685 0 8 0C11.315 0 14 2.685 14 6C14 9.315 11.315 12 8 12ZM8 10C10.21 10 12 8.21 12 6C12 3.79 10.21 2 8 2C5.79 2 4 3.79 4 6C4 8.21 5.79 10 8 10Z"
+              ></path>
+            </svg>
+
+            <h5>Clientes</h5>
+            <p>
+              Desde su panel de control, un cliente puede ver sus pedidos
+              recientes, gestionar sus direcciones de envío y facturación, y editar
+              su contraseña y los detalles de su cuenta.
+            </p>
+          </div>
+        </div>
+      </div>  
+      <!-- <div class="w-full flex flex-col gap-6 [&>h4]:lg:text-2xl [&>h4]:md:text-xl [&>h4]:text-lg [&>h4]:text-celeste [&>h4]:font-medium [&>h4]:sm:text-grey-light [&>p]:lg:text-lg [&>p]:text-base [&>p]:font-regular [&>p]:sm:text-grey-text [&>p]:text-grey-light">
+        <h4 class="md:text-3xl text-2xl font-bold">Integraciónes Personalizadas</h4>
+        <p class="max-w-prose">
+          Agrega los metodos de pago y envios que desees a tu Tienda, consulta
+          el precio de cada integración, ya que algunas empresas cobran por
+          agregar su sistema a las tiendas.
+        </p>
+        <div>
+          <h5></h5>
+        </div>
+      </div> -->
+    </article>
+    <article
+      class="bg-gradient-to-bl from-dark-light/[0.1] via-dark-light/[0.6] to-dark/[0.6] rounded-3xl lg:py-12 lg:px-10 sm:py-10 sm:px-6 px-4 py-8 flex flex-col xl:gap-16 md:gap-14 gap-12"
+    >
+      <div
+        class="flex md:flex-row flex-col justify-between xl:gap-10 md:gap-8 gap-10"
+      >
+        <div
+          class="2xl:w-6/12 xl:w-[45%] md:w-6/12 flex flex-col lg:gap-10 sm:gap-8 gap-7"
+        >
+          <h3
+            class="xl:text-7xl lg:text-6xl md:text-5xl text-[2.7rem] font-bold leading-none text-light bg-gradient-to-bl from-light/[1] via-verde/[1] to-light/[1] text-transparent bg-clip-text"
+          >
+            Sitio Web Personalizado
+          </h3>
+          <p
+            class="xl:text-xl lg:text-xl md:text-lg text-base font-medium text-grey-light"
+          >
+          Nuestras Tiendas Virtuales son fáciles de usar y tienen diseños personalizados para potenciar tus ventas. Con disponibilidad las 24/7, te destacarás de la competencia y brindarás una experiencia de compra excepcional a tus clientes.
+          </p>
+          <div class="">
+            <div class="flex items-end gap-1">
+              <p
+                class="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-[2.5rem] font-bold mb-2 leading-none text-grey-light"
+              >
+                *Precio Particular
+              </p>
+          </div>
+          <div
+            class="flex lg:flex-row md:flex-col sm:flex-row flex-col sm:gap-5 gap-8 lg:items-center relative w-fit"
+          >
+            <a
+              href="/contacto"
+              class="btn bg-violeta text-light hover:bg-dark hover:text-violet-300 hover:ring-2 hover:ring-violeta transition-all [&>svg]:hover:fill-violeta w-fit hover:scale-105 h-auto font-medium hover:font-bold"
+              >Quiero una Página <svg
+                class="fill-light"
+                width="22"
+                height="24"
+                viewBox="0 0 22 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.9014 24L16.2254 23.4366C13.9718 21.2958 12.3944 19.9437 12.3944 18.2535C12.3944 16.9014 13.5211 15.7746 14.8732 15.7746C15.662 15.7746 16.4507 16.1127 16.9014 16.6761C17.3521 16.1127 18.1408 15.7746 18.9296 15.7746C20.2817 15.7746 21.4085 16.7887 21.4085 18.2535C21.4085 19.9437 19.831 21.2958 17.5775 23.4366L16.9014 24ZM15.7746 0C17.0141 0 18.0282 1.01408 18.0282 2.25352V12.4845L16.9014 12.3944L15.7746 12.4845V2.25352H10.1408V11.2676L7.32394 8.73239L4.50704 11.2676V2.25352H2.25352V20.2817H10.231C10.3662 21.093 10.6479 21.8479 11.0423 22.5352H2.25352C1.01408 22.5352 0 21.5211 0 20.2817V2.25352C0 1.01408 1.01408 0 2.25352 0H15.7746Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="/trabajos"
+              class="flex items-center [&>svg]:hover:h-4 gap-2 stroke-grey-text text-grey-text hover:scale-110 transition-all hover:[&>*]:scale-105 lg:text-base text-sm"
+              >Ver Ejemplos <svg
+                class="lg:w-5 h-3 stroke-2"
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.4082 3.5H2.4082C2.14299 3.5 1.88863 3.60536 1.7011 3.79289C1.51356 3.98043 1.4082 4.23478 1.4082 4.5V14.5C1.4082 14.7652 1.51356 15.0196 1.7011 15.2071C1.88863 15.3946 2.14299 15.5 2.4082 15.5H12.4082C12.6734 15.5 12.9278 15.3946 13.1153 15.2071C13.3028 15.0196 13.4082 14.7652 13.4082 14.5V9.5M7.4082 9.5L14.9082 2M10.4082 0.5H16.4082V6.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <span
+          class="md:hidden visible h-[0.01px] border border-dashed w-full border-grey opacity-50"
+        ></span>
+        <div class="w-auto md:self-center">
+          <ul
+            class="grid xl:grid-cols-2 items-start grid-cols-1 xl:gap-x-2 xl:gap-y-8 lg:gap-8 md:gap-8 gap-8"
+          >
+            {
+              caracteristicasSitioWebPersonalizado.map((item) => (
+                <li class="flex items-center gap-2 leading-none md:text-lg text-base w-fit 
+                xl:even:-order-none 
+                xl:odd:-order-none 
+                odd:-order-last
+                even:-order-first self-center">
+                  <svg
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="8"
+                      cy="8.5"
+                      r="8"
+                      class="fill-violeta"
+                      fill-opacity="0.8"
+                    />
+                    <path
+                      d="M6.83826 12.5C6.58967 12.5 6.35422 12.384 6.20335 12.184L4.16144 9.486C4.09831 9.40268 4.05222 9.30774 4.02581 9.20659C3.9994 9.10545 3.99318 9.00009 4.00751 8.89654C4.02184 8.79299 4.05644 8.69329 4.10933 8.60312C4.16222 8.51295 4.23236 8.43409 4.31574 8.37104C4.3991 8.30774 4.49413 8.2615 4.59539 8.23499C4.69664 8.20848 4.80214 8.20221 4.90582 8.21654C5.00951 8.23088 5.10934 8.26553 5.19961 8.31852C5.28987 8.37151 5.36879 8.4418 5.43185 8.52534L6.7754 10.2992L10.1534 4.87472C10.2655 4.69561 10.444 4.56826 10.6498 4.52058C10.8556 4.47291 11.0719 4.50881 11.2512 4.62041C11.6244 4.85243 11.7393 5.3439 11.5061 5.71765L7.5149 12.124C7.44677 12.2338 7.35285 12.3254 7.24131 12.3907C7.12978 12.456 7.00398 12.4932 6.87484 12.4989C6.86227 12.5 6.85084 12.5 6.83826 12.5Z"
+                      class="fill-light stroke-2"
+                    />
+                  </svg>
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <span
+        class="h-[0.01px] border border-dashed w-full border-grey opacity-50"
+      ></span>
+      <div class="w-full flex flex-col sm:gap-12 gap-8">
+        <h4 class="md:text-3xl text-2xl font-bold">
+          Costos Extras de la <br class="sm:hidden visible">Tienda Virtual
+        </h4>
+        <div
+          class="w-full grid lg:grid-cols-2 grid-cols-1 md:gap-10 gap-6 [&>div>h5]:lg:text-2xl [&>div>h5]:text-xl [&>div>h5]:text-grey-light [&>div>h5]:font-medium [&>div>p]:lg:text-lg [&>div>p]:text-base [&>div>p]:font-regular [&>div>p]:text-grey-text"
+        >
+          <div class="">
+            <svg
+              class="[&>path]:stroke-violet-400 h-20 w-auto mb-4"
+              width="22"
+              height="21"
+              viewBox="0 0 22 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 20H5C3.114 20 2.172 20 1.586 19.414C1 18.828 1 17.886 1 16C1 14.114 1 13.172 1.586 12.586C2.172 12 3.114 12 5 12H17C18.886 12 19.828 12 20.414 12.586C21 13.172 21 14.114 21 16C21 17.886 21 18.828 20.414 19.414C19.828 20 18.886 20 17 20H16M10 1H17C18.886 1 19.828 1 20.414 1.586C21 2.172 21 3.114 21 5C21 6.886 21 7.828 20.414 8.414C19.828 9 18.886 9 17 9H5C3.114 9 2.172 9 1.586 8.414C1 7.828 1 6.886 1 5C1 3.114 1 2.172 1.586 1.586C2.172 1 3.114 1 5 1H6M10 5H17M5 5H7M10 16H17M5 16H7"
+                stroke-linecap="round"></path>
+            </svg>
+
+            <h5>Hosting</h5>
+            <p class="max-w-prose">
+              La compra de una tienda virtual viene con un año gratuito de
+              Hosting.<br /><strong
+                class="font-medium border-b border-grey/[0.7]"
+              >
+                A partir del segundo año, el precio es de 30 USD por AÑO, pero se
+                puede abonar en Pesos argentinos</strong
+              > al tipo de Cambio oficial que presente el Banco Central al momento
+              de pagar.
+            </p>
+          </div>
+          <div>
+            <svg
+              width="22"
+              height="18"
+              viewBox="0 0 22 18"
+              xmlns="http://www.w3.org/2000/svg"
+              class="[&>path]:fill-celeste/[0.8] h-20 w-auto mb-4"
+            >
+              <path
+                d="M11 0.0664062C6.58765 0.0664062 3 3.65417 3 8.06641C3 8.74239 3.08545 9.41395 3.25391 10.0664H0.5V17.9336H21.5V10.0664H18.7461C18.9143 9.41401 19 8.74196 19 8.06641C19 3.65417 15.4123 0.0664062 11 0.0664062ZM11 1.06641C11.2895 1.06641 11.5865 1.19599 11.9082 1.51172C12.2299 1.82744 12.552 2.32479 12.8262 2.96094C13.1705 3.76 13.4255 4.79028 13.5781 5.93359H8.42188C8.57455 4.79028 8.82947 3.76 9.17383 2.96094C9.44798 2.32479 9.77011 1.82744 10.0918 1.51172C10.4135 1.19599 10.7105 1.06641 11 1.06641ZM8.91016 1.38281C8.66688 1.72746 8.44752 2.11971 8.25586 2.56445C7.85157 3.50257 7.56998 4.6618 7.41211 5.93359H4.33203C5.02273 3.76605 6.73638 2.05969 8.91016 1.38281ZM13.0898 1.38281C15.2636 2.05969 16.9773 3.76605 17.668 5.93359H14.5879C14.43 4.6618 14.1484 3.50257 13.7441 2.56445C13.5525 2.11971 13.3331 1.72746 13.0898 1.38281ZM4.09961 6.93359H7.31641C7.29274 7.30653 7.26758 7.67854 7.26758 8.06641C7.26758 8.78156 7.322 9.41367 7.40625 10.0664H4.29882C4.10531 9.41758 4 8.74461 4 8.06641C4 7.67963 4.03955 7.30316 4.09961 6.93359ZM8.31641 6.93359H13.6836C13.709 7.30483 13.7324 7.67832 13.7324 8.06641C13.7324 8.7873 13.6787 9.40291 13.5879 10.0664H8.41211C8.32129 9.40292 8.26758 8.78725 8.26758 8.06641C8.26758 7.67832 8.29099 7.30483 8.31641 6.93359ZM14.6836 6.93359H17.9004C17.9605 7.30316 18 7.67963 18 8.06641C18 8.74482 17.8948 9.41755 17.7012 10.0664H14.5938C14.6779 9.41362 14.7324 8.78117 14.7324 8.06641C14.7324 7.67854 14.7073 7.30653 14.6836 6.93359ZM1.5 11.0664H20.5V16.9336H1.5V11.0664Z"
+                fill="black"></path>
+              <path
+                d="M9.4296 12.1649C9.12143 12.305 8.81326 12.4451 8.5051 12.5851C9.05503 13.6818 9.60404 14.7789 10.1536 15.8758C10.4475 15.4335 10.7415 14.9912 11.0355 14.549C11.3685 14.9839 11.7015 15.4188 12.0345 15.8537C12.5207 14.7546 13.0067 13.6554 13.4931 12.5563C13.179 12.4292 12.865 12.3022 12.5509 12.1751C12.2971 12.7445 12.0457 13.3148 11.7932 13.8848C11.5205 13.5289 11.2478 13.1731 10.9752 12.8173C10.7433 13.1658 10.5114 13.5143 10.2796 13.8627C9.9962 13.2968 9.71212 12.7312 9.4296 12.1649Z"
+                fill="black"></path>
+              <path
+                d="M3.91566 12.1649C3.60749 12.305 3.29933 12.4451 2.99116 12.5851C3.54109 13.6818 4.0901 14.7789 4.63964 15.8758C4.93361 15.4335 5.22758 14.9912 5.52155 14.549C5.85456 14.9839 6.18757 15.4188 6.52058 15.8537C7.0068 14.7546 7.49279 13.6554 7.97919 12.5563C7.66511 12.4292 7.35103 12.3022 7.03695 12.1751C6.78316 12.7445 6.53174 13.3148 6.27925 13.8848C6.00657 13.5289 5.73389 13.1731 5.46122 12.8173C5.22935 13.1658 4.99749 13.5143 4.76563 13.8627C4.48226 13.2968 4.19818 12.7312 3.91566 12.1649Z"
+                fill="black"></path>
+              <path
+                d="M14.9422 12.1649C14.6346 12.305 14.3271 12.4451 14.0195 12.5851C14.5694 13.6818 15.1184 14.7789 15.668 15.8758C15.9619 15.4341 16.2559 14.9924 16.5499 14.5507C16.8823 14.985 17.2147 15.4194 17.5471 15.8537C18.0342 14.7547 18.5178 13.6543 19.0075 12.5563C18.6928 12.4292 18.3782 12.3022 18.0635 12.1751C17.8121 12.7458 17.5596 13.316 17.3076 13.8865C17.0349 13.5301 16.7622 13.1737 16.4895 12.8173C16.2577 13.1658 16.0258 13.5143 15.7939 13.8627C15.5101 13.2968 15.2273 12.7303 14.9422 12.1649Z"
+                fill="black"></path>
+            </svg>
+            <h5>Dominio</h5>
+            <p class="max-w-prose">
+              La compra de una tienda virtual viene con un Dominio .com.ar
+              <br />incluido por un año.<br /><strong
+                class="font-medium border-b border-grey/[0.7]"
+                >A partir del segundo año, el precio es de 10 USD por AÑO y se
+                puede abonar en Pesos argentinos</strong
               > al tipo de Cambio oficial que presente el Banco Central al momento
               de pagar.
             </p>
