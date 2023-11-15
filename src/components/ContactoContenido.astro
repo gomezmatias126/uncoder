@@ -241,8 +241,8 @@
     respuesta.style.visibility = "visible";
     e.preventDefault();
     btnEnviarForm.disabled = true;
-    var datos = new FormData(formulario);
-    fetch("https://enviar-emailsdesdehtml.gomezmatias126.workers.dev/", {
+    let datos = new FormData(formulario);
+    fetch("https://worker-polished-snow-a146.gomezmatias126.workers.dev/", {
       method: "POST",
       body: datos,
     })
