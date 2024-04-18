@@ -1,0 +1,148 @@
+---
+const nav_item = ["servicios", "precios", "trabajos"];
+let barrita = "/";
+---
+
+<header
+  id="header_navbar"
+  class="w-full h-20 flex items-center justify-center fixed z-50 top-0 transition-all"
+>
+  <nav class="container static">
+    <ul
+      class="flex flex-row items-center [&>div>a]:text-base justify-between static"
+    >
+      <li class="md:flex-grow md:basis-0">
+        <a href="/" class="font-bold sm:text-3xl text-2xl">uncoder</a>
+      </li>
+      <li
+        id="item_navbar_links"
+        class="lista_item_navbar md:flex hidden bg-dark/[0.95] md:flex-row justify-center absolute md:static md:w-auto md:bg-transparent md:top-0 top-full left-0 w-full flex-col items-center sm:font-medium font-bold gap-10 md:text-base text-4xl capitalize transition-all"
+      >
+        {
+          nav_item.map((item) => (
+            <a
+              class="hover:scale-105 hover:text-celeste"
+              href={item === "servicios" ? "/#" + item : barrita + item}
+            >
+              {item}
+            </a>
+          ))
+        }
+        <a
+          href="/contacto"
+          class="visible md:hidden bg-light px-10 py-3 text-dark font-bold rounded-3xl"
+          >Pedí Tu Página</a
+        >
+      </li>
+      <li class="md:flex hidden md:flex-grow md:basis-0 md:justify-end">
+        <a
+          href="/contacto"
+          class="bg-light px-10 py-3 text-dark font-bold rounded-3xl btn_animacion"
+          >Pedí Tu Página</a
+        >
+      </li>
+      <li class="md:hidden visible h-auto flex">
+        <button
+          id="btn_toggle_navbar"
+          class="md:hidden visible"
+          aria-roledescription="Boton para Abrir Menu de Navegación"
+          name="Boton para Abrir Menu de Navegación"
+        >
+          <div id="btn_toggle_navbar_svg_close" class="hidden">
+            <svg
+              width="41"
+              height="41"
+              viewBox="0 0 41 41"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M35.9996 0.5L20.9961 15.5L5.99609 0.5L0.996094 5.5L15.9961 20.5L0.996094 35.5L5.99609 40.5L20.9961 25.5L35.9996 40.5L40.9996 35.5L25.9996 20.5L40.9996 5.5L35.9996 0.5Z"
+                fill="#FCFEFF"></path>
+            </svg>
+          </div>
+          <div id="btn_toggle_navbar_svg_open" class="visible">
+            <svg
+              width="40"
+              height="21"
+              viewBox="0 0 40 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0H40V3H0V0Z" fill="#FCFEFF"></path>
+              <path d="M20 9H40V12H20V9Z" fill="#FCFEFF"></path>
+              <path d="M10 18H40V21H10V18Z" fill="#FCFEFF"></path>
+            </svg>
+          </div>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const btn_toggle_navbar = document.getElementById("btn_toggle_navbar");
+  const item_navbar_links = document.getElementById("item_navbar_links");
+  const btn_toggle_navbar_svg_close = document.getElementById(
+    "btn_toggle_navbar_svg_close"
+  );
+  const btn_toggle_navbar_svg_open = document.getElementById(
+    "btn_toggle_navbar_svg_open"
+  );
+  const header_navbar = document.getElementById("header_navbar");
+  let prevScrollpos = window.scrollY;
+
+  function toggleMenu() {
+    btn_toggle_navbar_svg_close.classList.toggle("hidden");
+    btn_toggle_navbar_svg_open.classList.toggle("hidden");
+    item_navbar_links.classList.toggle("hidden");
+    item_navbar_links.classList.toggle("flex");
+    if (item_navbar_links.classList.contains("hidden") === false) {
+      header_navbar.classList.add("bg-dark");
+      item_navbar_links.addEventListener("click", toggleMenu);
+    } else {
+      if(window.scrollY <= 100) header_navbar.classList.remove("bg-dark");
+      item_navbar_links.removeEventListener("click", toggleMenu);
+    }
+  }
+  btn_toggle_navbar.addEventListener("click", toggleMenu);
+
+  window.onscroll = function () {
+    let currentScrollPos = window.scrollY;
+    if (btn_toggle_navbar_svg_close.classList.contains("hidden") === false)
+      return;
+    if (window.scrollY >= 100) {
+      header_navbar.classList.add("bg-dark");
+    } else {
+      if (item_navbar_links.classList.contains("hidden") !== false){
+        header_navbar.classList.remove("bg-dark");
+      }
+    }
+    if (prevScrollpos > currentScrollPos) {
+      header_navbar.style.top = "0";
+    } else {
+      header_navbar.style.top = "-5rem";
+    }
+    prevScrollpos = currentScrollPos;
+  };
+</script>
+
+<style>
+  @media (max-width: 768px) {
+    .lista_item_navbar {
+      height: calc(100vh - 5rem);
+    }
+  }
+  .btn_animacion{
+    transition: scale 750ms, background-color 1000ms, color 1000ms, font-weight 500ms;
+    will-change: scale, background-color, color, font-weight;
+  }
+
+  .btn_animacion:hover,
+  .btn_animacion:focus {
+    font-weight: normal;
+    color: #FCFEFF;
+    background-color: #883BFF;
+    scale: 1.04;
+  }
+</style>

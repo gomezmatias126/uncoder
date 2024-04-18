@@ -1,0 +1,37 @@
+---
+import "@fontsource/dm-sans";
+export interface Props {
+	title: string;
+	textoBotonContactoFooter: string;
+	mostrarFooterContacto: Boolean;
+	linkBotonContactoFooter: string;
+}
+let { title, textoBotonContactoFooter, mostrarFooterContacto, linkBotonContactoFooter } = Astro.props;
+import Navbar from "../components/Navbar.astro";
+import BannerContacto from "../components/FooterContacto.astro";
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-dark text-light">
+		<Navbar />
+		<slot />
+		{
+			mostrarFooterContacto &&
+				<footer>
+					<BannerContacto {textoBotonContactoFooter} {linkBotonContactoFooter} />
+				</footer>
+		}
+	</body>
+</html>
+<style>
+  
+</style>
