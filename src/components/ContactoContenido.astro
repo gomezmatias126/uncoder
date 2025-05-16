@@ -250,7 +250,6 @@
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Respuesta del worker:", data);
         if (data.error) {
           respuesta.textContent = "Hubo un error al enviar el mensaje.";
           respuesta.classList.add("error");
