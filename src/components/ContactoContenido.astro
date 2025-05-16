@@ -243,7 +243,7 @@
     btnEnviarForm.disabled = true;
     //let datos = new FormData(formulario);
     const datos = Object.fromEntries(new FormData(formulario).entries());
-    fetch("/api/contact", {
+    fetch("https://910d49cf.uncoder.pages.dev", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(datos),

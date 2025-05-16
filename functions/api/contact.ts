@@ -1,6 +1,7 @@
 export const onRequestPost: PagesFunction = async ({ request, env }) => {
   const body = await request.json();
 
+
   const { nombre, email, mensaje } = body;
 
   const res = await fetch("https://api.resend.com/emails", {
