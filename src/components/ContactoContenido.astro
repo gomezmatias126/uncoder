@@ -250,26 +250,24 @@
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        respuesta.textContent = data;
-        if (data.includes("Error")) {
+        console.log("Respuesta del worker:", data);
+        if (data.error) {
+          respuesta.textContent = "Hubo un error al enviar el mensaje.";
           respuesta.classList.add("error");
-          enable__form();
-          setTimeout(() => {
-            respuesta.classList.remove("error");
-          }, 10000);
         } else {
+          respuesta.textContent = "Mensaje enviado correctamente.";
           respuesta.classList.add("sended");
           formulario.reset();
-          enable__form();
-          setTimeout(() => {
-            respuesta.classList.remove("sended");
-          }, 10000);
         }
+        enable__form();
+        setTimeout(() => {
+            respuesta.classList.remove("error", "sended");
+        }, 10000);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error("Error de red:", err);
         respuesta.textContent =
-          "Hay fallas en el envio, intente por otra via de contacto";
+          "Hay fallas en el envío, intente por otra vía de contacto.";
         respuesta.classList.add("error");
         enable__form();
         setTimeout(() => {
