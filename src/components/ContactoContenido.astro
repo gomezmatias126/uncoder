@@ -241,10 +241,12 @@
     respuesta.style.visibility = "visible";
     e.preventDefault();
     btnEnviarForm.disabled = true;
-    let datos = new FormData(formulario);
-    fetch("https://worker-polished-snow-a146.gomezmatias126.workers.dev/", {
+    //let datos = new FormData(formulario);
+    const datos = Object.fromEntries(new FormData(formulario).entries());
+    fetch("/api/contact", {
       method: "POST",
-      body: datos,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(datos),
     })
       .then((response) => response.json())
       .then((data) => {
