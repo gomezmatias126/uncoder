@@ -247,6 +247,12 @@
     //let datos = new FormData(formulario);
     const datos = Object.fromEntries(new FormData(formulario).entries());
     const token = document.querySelector('.cf-turnstile [name="cf-turnstile-response"]').value;
+    if (!token) {
+      respuesta.textContent = "Error: no se pudo validar el captcha";
+      respuesta.classList.add("error");
+      enable__form();
+      return;
+    }
     datos["cf-turnstile-response"] = token;
 
     fetch("https://odd-cell-1af9.gomezmatias126.workers.dev/", {
