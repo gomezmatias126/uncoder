@@ -246,6 +246,9 @@
     btnEnviarForm.disabled = true;
     //let datos = new FormData(formulario);
     const datos = Object.fromEntries(new FormData(formulario).entries());
+    const token = document.querySelector('.cf-turnstile [name="cf-turnstile-response"]').value;
+    datos["cf-turnstile-response"] = token;
+
     fetch("https://odd-cell-1af9.gomezmatias126.workers.dev/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
