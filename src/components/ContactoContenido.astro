@@ -256,7 +256,7 @@
     }
     datos["cf-turnstile-response"] = token;
 
-    fetch("https://enviaremail.uncoder.com.ar/", {
+    fetch("https://enviaremail.uncoder.com.ar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(datos),
